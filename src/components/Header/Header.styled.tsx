@@ -13,9 +13,31 @@ export const HeaderSection = styled.section`
 `;
 
 export const HeaderContainer = styled.div`
-  padding: 8px 16px;
+  padding: 8px;
   display: flex;
   justify-content: space-between;
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1280px) {
+  }
+`;
+
+export const LogoLink = styled.a`
+  padding: 8px 0;
+  svg {
+    width: 48px;
+    height: 32px;
+    path {
+      fill: var(--secondary-font-color);
+      transition: fill var(--transition-dur-and-func);
+    }
+    &:hover path,
+    &:focus path {
+      fill: var(--main-font-color);
+    }
+  }
+
   @media screen and (min-width: 768px) {
   }
 

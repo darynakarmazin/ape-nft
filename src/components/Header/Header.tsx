@@ -1,16 +1,16 @@
 import { Logo } from '../../img/icons/Icons';
 import '../../fonts/fonts.css';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
-import { HeaderContainer, HeaderSection } from './Header.styled';
+import { HeaderContainer, HeaderSection, LogoLink } from './Header.styled';
 
 function Header() {
   return (
     <HeaderSection>
       <div className="container">
         <HeaderContainer>
-          <a href="/" aria-label="Logo link to main page">
+          <LogoLink href="/" aria-label="Logo link to main page">
             <Logo />
-          </a>
+          </LogoLink>
           <BurgerMenu />
         </HeaderContainer>
       </div>

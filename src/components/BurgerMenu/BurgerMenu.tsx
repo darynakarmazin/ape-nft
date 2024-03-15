@@ -1,13 +1,14 @@
 import { Discord, Opensea, Twitter } from '../../img/icons/Icons';
+import { MenuBtn, MenuItem, MenuList } from './BurgerMenu.styled';
 
 function BurgerMenu() {
   return (
     <nav>
-      <ul>
-        <li>
-          <button type="button">MENU</button>
-        </li>
-        <li>
+      <MenuList>
+        <MenuItem>
+          <MenuBtn type="button">MENU</MenuBtn>
+        </MenuItem>
+        <MenuItem>
           <a
             href="https://discord.com/"
             target="_blank"
@@ -16,8 +17,8 @@ function BurgerMenu() {
           >
             <Discord />
           </a>
-        </li>
-        <li>
+        </MenuItem>
+        <MenuItem>
           <a
             href="https://opensea.io/"
             target="_blank"
@@ -26,8 +27,8 @@ function BurgerMenu() {
           >
             <Opensea />
           </a>
-        </li>
-        <li>
+        </MenuItem>
+        <MenuItem>
           <a
             href="https://twitter.com/"
             target="_blank"
@@ -36,8 +37,8 @@ function BurgerMenu() {
           >
             <Twitter />
           </a>
-        </li>
-      </ul>
+        </MenuItem>
+      </MenuList>
     </nav>
   );
 }
