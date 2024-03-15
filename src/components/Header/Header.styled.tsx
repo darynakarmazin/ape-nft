@@ -17,9 +17,11 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   @media screen and (min-width: 768px) {
+    padding: 12px;
   }
 
   @media screen and (min-width: 1280px) {
+    padding: 24px 96px;
   }
 `;
 
@@ -42,5 +44,10 @@ export const LogoLink = styled.a`
   }
 
   @media screen and (min-width: 1280px) {
+    padding: 15px 0;
+    svg {
+      width: 72px;
+      height: 50px;
+    }
   }
 `;
