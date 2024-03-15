@@ -9,6 +9,7 @@ export const MenuList = styled.ul`
   }
 
   @media screen and (min-width: 1280px) {
+    gap: 16px;
   }
 `;
 
@@ -45,6 +46,17 @@ export const MenuItem = styled.li`
   }
 
   @media screen and (min-width: 1280px) {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+
+    a {
+      padding: 28px;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 `;
 
@@ -61,7 +73,7 @@ export const MenuBtn = styled.button`
   font-family: 'MessinaSansMono-Regular';
   font-size: 12px;
   font-weight: 600;
-  line-height: 19px;
+  line-height: 14px;
   letter-spacing: 0%;
   cursor: pointer;
   transition: all var(--transition-dur-and-func);
@@ -75,5 +87,7 @@ export const MenuBtn = styled.button`
   }
 
   @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 19px;
   }
 `;
