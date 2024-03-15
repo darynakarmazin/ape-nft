@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: 'BiroScript-PlusBold';
+  src: url('./BiroScript/BiroScriptPlus-Bold.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'MessinaSansMono-Regular';
   src: url('./MessinaSans/MessinaSansMono-Regular.ttf') format('truetype');
 }
@@ -11,4 +16,9 @@
 @font-face {
   font-family: 'RightGrotesk-CompactBlack';
   src: url('./RightGrotesk/RightGrotesk-CompactBlack.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'RightGrotesk-Mediums';
+  src: url('./RightGrotesk/RightGrotesk-Medium.otf') format('opentype');
 }

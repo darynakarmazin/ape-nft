@@ -1,22 +1,20 @@
 import { Logo } from '../../img/icons/Icons';
 import '../../fonts/fonts.css';
+import BurgerMenu from '../BurgerMenu/BurgerMenu';
+import { HeaderContainer, HeaderSection } from './Header.styled';
 
 function Header() {
   return (
-    <header>
-      <a href="/">
-        <Logo />
-      </a>
-      <p style={{ fontFamily: 'BiroScriptPlus' }}>
-        Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod{' '}
-      </p>
-      <p style={{ fontFamily: 'MessinaSansMono-Regular' }}>
-        Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod{' '}
-      </p>
-      <p style={{ fontFamily: 'RightGrotesk-CompactBlack' }}>
-        Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod{' '}
-      </p>
-    </header>
+    <HeaderSection>
+      <div className="container">
+        <HeaderContainer>
+          <a href="/" aria-label="Logo link to main page">
+            <Logo />
+          </a>
+          <BurgerMenu />
+        </HeaderContainer>
+      </div>
+    </HeaderSection>
   );
 }
 
