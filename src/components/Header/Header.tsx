@@ -1,7 +1,11 @@
+import { Logo } from '../../img/icons/Icons';
+
 function Header() {
   return (
     <header>
-      <a href="/">лого</a>
+      <a href="/">
+        <Logo />
+      </a>
     </header>
   );
 }
