@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'BiroScriptPlus';
+  src: url('./BiroScript/BiroScriptPlus.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MessinaSansMono-Regular';
+  src: url('./MessinaSans/MessinaSansMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'RightGrotesk-CompactBlack';
+  src: url('./RightGrotesk/RightGrotesk-CompactBlack.otf') format('opentype');
+}
