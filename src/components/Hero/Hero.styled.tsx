@@ -15,10 +15,12 @@ export const HeroSection = styled.section`
 
   @media screen and (min-width: 768px) {
     height: 421px;
+    padding: 124px 72px 35px;
   }
 
   @media screen and (min-width: 1280px) {
     height: 677px;
+    padding: 197px 194px 35px;
   }
 `;
 
@@ -31,6 +33,10 @@ export const HeroTitle = styled.h1`
   margin-bottom: 8px;
   text-align: center;
   @media screen and (min-width: 768px) {
+    font-size: 92px;
+    line-height: 92px;
+    word-spacing: 160px;
+    margin-bottom: 16px;
   }
 
   @media screen and (min-width: 1280px) {
@@ -45,6 +51,9 @@ export const HeroQuestion = styled.p`
   margin-bottom: 6px;
   text-align: center;
   @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 33px;
+    text-align: left;
   }
 
   @media screen and (min-width: 1280px) {
@@ -84,7 +93,15 @@ export const HeroBtn = styled.a`
   font-weight: 900;
   line-height: 19px;
   margin-bottom: 12px;
+  transition: all var(--transition-dur-and-func);
+  &:hover,
+  &:focus {
+    color: var(--main-font-color);
+  }
   @media screen and (min-width: 768px) {
+    width: 190px;
+    padding: 10px 61px 12px;
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: 1280px) {
@@ -100,8 +117,26 @@ export const HeroDescription = styled.p`
   text-align: center;
   text-transform: uppercase;
   @media screen and (min-width: 768px) {
+    text-align: justify;
+    text-indent: 80px;
   }
 
   @media screen and (min-width: 1280px) {
+  }
+`;
+
+export const TextWrapper = styled.div`
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+
+export const DeckWrapper = styled.div`
+  @media screen and (min-width: 768px) {
+    display: flex;
+    width: 190px;
+    gap: 16px;
+    flex-direction: column-reverse;
   }
 `;
