@@ -2,8 +2,22 @@ import { Logo } from '../../img/icons/Icons';
 import '../../fonts/fonts.css';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import { HeaderContainer, HeaderSection, LogoLink } from './Header.styled';
+import { useEffect, useState } from 'react';
 
 function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 48);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <HeaderSection>
       <div
@@ -12,9 +26,9 @@ function Header() {
       >
         <HeaderContainer>
           <LogoLink href="/" aria-label="Logo link to main page">
-            <Logo />
+            {!isScrolled && <Logo />}
           </LogoLink>
-          <BurgerMenu />
+          <BurgerMenu isScrolled={isScrolled} />
         </HeaderContainer>
       </div>
     </HeaderSection>

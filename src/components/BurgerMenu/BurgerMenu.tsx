@@ -9,7 +9,11 @@ import {
   SocialList,
 } from './BurgerMenu.styled';
 
-function BurgerMenu() {
+interface Props {
+  isScrolled: boolean;
+}
+
+function BurgerMenu({ isScrolled }: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
@@ -17,7 +21,7 @@ function BurgerMenu() {
   };
 
   return (
-    <NavMenu>
+    <NavMenu isScrolled={isScrolled}>
       {isMenuOpen && (
         <SocialList>
           <SocialItem>

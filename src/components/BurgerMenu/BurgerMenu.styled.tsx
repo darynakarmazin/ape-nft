@@ -36,10 +36,6 @@ export const MenuItem = styled.li`
         transition: fill var(--transition-dur-and-func);
       }
     }
-    &:hover path,
-    &:focus path {
-      fill: var(--main-font-color);
-    }
   }
 
   @media screen and (min-width: 768px) {
@@ -69,7 +65,7 @@ export const MenuBtn = styled.button`
   border-radius: 8px;
   background: transparent;
   border: none;
-  color: var(--secondary-font-color);
+  color: inherit;
   font-family: 'MessinaSansMono-Regular';
   font-size: 12px;
   font-weight: 600;
@@ -79,7 +75,7 @@ export const MenuBtn = styled.button`
   transition: all var(--transition-dur-and-func);
   &:hover,
   &:focus {
-    color: var(--main-font-color);
+    color: inherit;
     text-decoration: underline;
   }
 
@@ -126,7 +122,7 @@ export const SocialItem = styled.li`
     border-radius: 8px;
     background: transparent;
     border: none;
-    color: var(--secondary-font-color);
+    color: inferit;
     font-family: 'MessinaSansMono-Regular';
     font-size: 12px;
     font-weight: 600;
@@ -136,7 +132,7 @@ export const SocialItem = styled.li`
     transition: all var(--transition-dur-and-func);
     &:hover,
     &:focus {
-      color: var(--main-font-color);
+      color: inherit;
       text-decoration: underline;
     }
   }
@@ -156,8 +152,34 @@ export const SocialItem = styled.li`
   }
 `;
 
-export const NavMenu = styled.nav`
+export const NavMenu = styled.nav<{ isScrolled: boolean }>`
   display: flex;
+  color: ${({ isScrolled }) =>
+    isScrolled ? 'var(--main-font-color)' : 'var(--secondary-font-color)'};
+  a {
+    svg {
+      path {
+        fill: ${({ isScrolled }) =>
+          isScrolled
+            ? 'var(--main-font-color)'
+            : 'var(--secondary-font-color)'};
+      }
+    }
+    &:hover path,
+    &:focus path {
+      fill: ${({ isScrolled }) =>
+        isScrolled ? 'var(--accent-color)' : 'var(--main-font-color)'};
+    }
+  }
+
+  a,
+  button {
+    &:hover,
+    &:focus {
+      color: ${({ isScrolled }) =>
+        isScrolled ? 'var(--accent-color)' : 'var(--main-font-color)'};
+    }
+  }
 
   @media screen and (min-width: 768px) {
   }
