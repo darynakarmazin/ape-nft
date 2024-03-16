@@ -101,8 +101,6 @@ img {
 }
 .content-container {
   width: 216px;
-  padding-left: 72px;
-  padding-right: 72px;
 }
 
 /* MOBILE */
@@ -114,8 +112,6 @@ img {
   }
   .content-container {
     width: 216px;
-    padding-left: 72px;
-    padding-right: 72px;
   }
 }
 
@@ -128,8 +124,6 @@ img {
   }
   .content-container {
     width: 592px;
-    padding-left: 88px;
-    padding-right: 88px;
   }
 }
 
@@ -142,7 +136,5 @@ img {
   }
   .content-container {
     width: 1032px;
-    padding-left: 204px;
-    padding-right: 204px;
   }
 }

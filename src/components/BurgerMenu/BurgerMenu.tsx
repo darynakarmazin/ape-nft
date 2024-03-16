@@ -1,12 +1,63 @@
+import { useState } from 'react';
 import { Discord, Opensea, Twitter } from '../../img/icons/Icons';
-import { MenuBtn, MenuItem, MenuList } from './BurgerMenu.styled';
+import {
+  MenuBtn,
+  MenuItem,
+  MenuList,
+  NavMenu,
+  SocialItem,
+  SocialList,
+} from './BurgerMenu.styled';
 
 function BurgerMenu() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <nav>
+    <NavMenu>
+      {isMenuOpen && (
+        <SocialList>
+          <SocialItem>
+            <a href="#about" aria-label="link scroll to the About section">
+              ABOUT
+            </a>
+          </SocialItem>
+          <SocialItem>
+            <a href="#m-map" aria-label="link scroll to the M-map section">
+              M-MAP
+            </a>
+          </SocialItem>
+          <SocialItem>
+            <a href="#faq" aria-label="link scroll to the FAQ section">
+              FAQ
+            </a>
+          </SocialItem>
+          <SocialItem>
+            <a href="#arts" aria-label="link scroll to the Arts section">
+              ARTS
+            </a>
+          </SocialItem>
+          <SocialItem>
+            <a href="#mint" aria-label="link scroll to the Mint section">
+              MINT
+            </a>
+          </SocialItem>
+        </SocialList>
+      )}
+
       <MenuList>
-        <MenuItem>
-          <MenuBtn type="button">MENU</MenuBtn>
+        <MenuItem
+          style={{
+            borderTopLeftRadius: isMenuOpen ? '0' : '8px',
+            borderBottomLeftRadius: isMenuOpen ? '0' : '8px',
+          }}
+        >
+          <MenuBtn type="button" onClick={handleMenuToggle}>
+            {isMenuOpen ? 'CLOSE' : ' MENU'}
+          </MenuBtn>
         </MenuItem>
         <MenuItem>
           <a
@@ -39,7 +90,7 @@ function BurgerMenu() {
           </a>
         </MenuItem>
       </MenuList>
-    </nav>
+    </NavMenu>
   );
 }
 

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-export const HeaderSection = styled.section`
+export const HeaderSection = styled.header`
   position: absolute;
+  z-index: 10;
   top: 54px;
   left: 0;
   width: 100%;

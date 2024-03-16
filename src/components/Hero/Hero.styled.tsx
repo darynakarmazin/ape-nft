@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import '../../fonts/fonts.css';
 
 export const HeroSection = styled.section`
+  position: relative;
+  height: 542px;
   margin-top: 54px;
   display: flex;
   flex-direction: column;
@@ -12,9 +14,11 @@ export const HeroSection = styled.section`
   padding: 36px 64px 19px;
 
   @media screen and (min-width: 768px) {
+    height: 421px;
   }
 
   @media screen and (min-width: 1280px) {
+    height: 677px;
   }
 `;
 
@@ -25,6 +29,7 @@ export const HeroTitle = styled.h1`
   line-height: 44px;
   letter-spacing: 1%;
   margin-bottom: 8px;
+  text-align: center;
   @media screen and (min-width: 768px) {
   }
 
@@ -38,6 +43,7 @@ export const HeroQuestion = styled.p`
   font-weight: 400;
   line-height: 27px;
   margin-bottom: 6px;
+  text-align: center;
   @media screen and (min-width: 768px) {
   }
 
@@ -46,8 +52,16 @@ export const HeroQuestion = styled.p`
 `;
 
 export const HeroPicture = styled.picture`
-  margin-bottom: -8px;
+  margin-bottom: -4px;
+  img {
+    display: block;
+  }
   @media screen and (min-width: 768px) {
+    position: absolute;
+    bottom: 0;
+    left: 206px;
+
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: 1280px) {

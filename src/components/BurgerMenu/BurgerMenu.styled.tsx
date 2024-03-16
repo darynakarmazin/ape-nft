@@ -91,3 +91,77 @@ export const MenuBtn = styled.button`
     line-height: 19px;
   }
 `;
+
+export const SocialList = styled.ul`
+  display: flex;
+  transition: all var(--transition-dur-and-func);
+
+  li:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1280px) {
+  }
+`;
+
+export const SocialItem = styled.li`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  backdrop-filter: blur(12px);
+  background: rgba(30, 30, 30, 0.1);
+  cursor: pointer;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: transparent;
+    border: none;
+    color: var(--secondary-font-color);
+    font-family: 'MessinaSansMono-Regular';
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: 0%;
+    cursor: pointer;
+    transition: all var(--transition-dur-and-func);
+    &:hover,
+    &:focus {
+      color: var(--main-font-color);
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 80px;
+    height: 80px;
+    a {
+      width: 80px;
+      height: 80px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+`;
+
+export const NavMenu = styled.nav`
+  display: flex;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1280px) {
+  }
+`;
