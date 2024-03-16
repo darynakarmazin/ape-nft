@@ -100,7 +100,8 @@ img {
   margin-right: auto;
 }
 .content-container {
-  width: 216px;
+  width: 100%;
+  min-width: 216px;
 }
 
 /* MOBILE */
@@ -111,7 +112,7 @@ img {
     padding-right: 8px;
   }
   .content-container {
-    width: 216px;
+    width: 336px;
   }
 }
 

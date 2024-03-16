@@ -71,6 +71,7 @@ export const HeroQuestion = styled.p`
 export const HeroPicture = styled.picture`
   margin-bottom: -4px;
   img {
+    margin: 0 auto;
     display: block;
   }
   @media screen and (min-width: 768px) {
@@ -87,6 +88,7 @@ export const HeroPicture = styled.picture`
 
 export const HeroBtn = styled.a`
   width: 216px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
