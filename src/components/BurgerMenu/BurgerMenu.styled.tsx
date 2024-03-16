@@ -151,25 +151,25 @@ export const SocialItem = styled.li`
   }
 `;
 
-export const NavMenu = styled.nav<{ scroll: string }>`
+export const NavMenu = styled.nav<{ $scroll: string }>`
   display: flex;
-  color: ${({ scroll }) =>
-    scroll === 'true'
+  color: ${({ $scroll }) =>
+    $scroll === 'true'
       ? 'var(--main-font-color)'
       : 'var(--secondary-font-color)'};
   a {
     svg {
       path {
-        fill: ${({ scroll }) =>
-          scroll === 'true'
+        fill: ${({ $scroll }) =>
+          $scroll === 'true'
             ? 'var(--main-font-color)'
             : 'var(--secondary-font-color)'};
       }
     }
     &:hover path,
     &:focus path {
-      fill: ${({ scroll }) =>
-        scroll === 'true' ? 'var(--accent-color)' : 'var(--main-font-color)'};
+      fill: ${({ $scroll }) =>
+        $scroll === 'true' ? 'var(--accent-color)' : 'var(--main-font-color)'};
     }
   }
 
@@ -177,13 +177,15 @@ export const NavMenu = styled.nav<{ scroll: string }>`
   button {
     &:hover,
     &:focus {
-      color: ${({ scroll }) =>
-        scroll === 'true' ? 'var(--accent-color)' : 'var(--main-font-color)'};
+      color: ${({ $scroll }) =>
+        $scroll === 'true' ? 'var(--accent-color)' : 'var(--main-font-color)'};
     }
   }
   li {
-    background: ${({ scroll }) =>
-      scroll === 'true' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(30, 30, 30, 0.1)'};
+    background: ${({ $scroll }) =>
+      $scroll === 'true'
+        ? 'rgba(255, 255, 255, 0.1)'
+        : 'rgba(30, 30, 30, 0.1)'};
     }
   }
 

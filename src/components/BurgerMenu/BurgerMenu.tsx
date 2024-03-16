@@ -21,7 +21,7 @@ function BurgerMenu({ isScrolled }: Props) {
   };
 
   return (
-    <NavMenu scroll={isScrolled ? 'true' : 'false'}>
+    <NavMenu $scroll={isScrolled ? 'true' : 'false'}>
       {isMenuOpen && (
         <SocialList>
           <SocialItem>
