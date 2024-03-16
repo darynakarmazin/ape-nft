@@ -10,6 +10,7 @@ export const HeaderSection = styled.header`
   }
 
   @media screen and (min-width: 1280px) {
+    top: 16px;
   }
 `;
 
@@ -22,7 +23,7 @@ export const HeaderContainer = styled.div`
   }
 
   @media screen and (min-width: 1280px) {
-    padding: 24px 96px;
+    padding: 24px;
   }
 `;
 

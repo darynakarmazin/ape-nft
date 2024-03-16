@@ -19,8 +19,9 @@ export const HeroSection = styled.section`
   }
 
   @media screen and (min-width: 1280px) {
+    margin-top: 16px;
     height: 677px;
-    padding: 197px 194px 35px;
+    padding: 197px 84px 81px 78px;
   }
 `;
 
@@ -40,6 +41,10 @@ export const HeroTitle = styled.h1`
   }
 
   @media screen and (min-width: 1280px) {
+    font-size: 164px;
+    line-height: 164px;
+    word-spacing: 265px;
+    margin-bottom: 40px;
   }
 `;
 
@@ -57,6 +62,8 @@ export const HeroQuestion = styled.p`
   }
 
   @media screen and (min-width: 1280px) {
+    font-size: 24px;
+    line-height: 40px;
   }
 `;
 
@@ -69,11 +76,11 @@ export const HeroPicture = styled.picture`
     position: absolute;
     bottom: 0;
     left: 206px;
-
     margin-bottom: 0;
   }
 
   @media screen and (min-width: 1280px) {
+    left: 365px;
   }
 `;
 
@@ -105,6 +112,10 @@ export const HeroBtn = styled.a`
   }
 
   @media screen and (min-width: 1280px) {
+    width: 338px;
+    font-size: 28px;
+    line-height: 34px;
+    padding: 16px 109.5px;
   }
 `;
 
@@ -122,6 +133,10 @@ export const HeroDescription = styled.p`
   }
 
   @media screen and (min-width: 1280px) {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19px;
+    text-indent: 40px;
   }
 `;
 
@@ -129,6 +144,9 @@ export const TextWrapper = styled.div`
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-left: 120px;
   }
 `;
 
@@ -138,5 +156,8 @@ export const DeckWrapper = styled.div`
     width: 190px;
     gap: 16px;
     flex-direction: column-reverse;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 338px;
   }
 `;
