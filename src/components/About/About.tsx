@@ -6,17 +6,24 @@ import DeskMonkeyImg1x from '../../img/about/about-monkey-deck.png';
 import DeskMonkeyImg2x from '../../img/about/about-monkey-deck@2.png';
 import { AddSharp } from '../../img/icons/Icons';
 import MovingBaner from '../MovingBaner/MovingBaner';
+import { AboutDescription, AboutSection, AboutTitle } from './About.styled';
 
 function About() {
   return (
-    <section id="about" style={{ height: '1400px' }}>
+    <AboutSection id="about" style={{ height: '1400px' }}>
       <div className="content-container">
         <div>
-          <h2>a Story that started with one simple ape</h2>
-          <p>
+          <AboutTitle>
+            a Story that started with{' '}
+            <span>
+              one simple <br />
+              ape
+            </span>
+          </AboutTitle>
+          <AboutDescription>
             WHO GOT FED UP WITH BORING AND HYPOCRITIC COMMONPLACE THIS IS HOW
             THE IDEA OF ESCAPING AND DYNAMIC JOURNEY ON THE YACHT
-          </p>
+          </AboutDescription>
         </div>
         <div>
           <AddSharp />
@@ -55,7 +62,7 @@ function About() {
         </picture>
         <MovingBaner />
       </div>
-    </section>
+    </AboutSection>
   );
 }
 
