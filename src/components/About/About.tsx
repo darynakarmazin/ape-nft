@@ -5,6 +5,7 @@ import TabMonkeyImg2x from '../../img/about/about-monkey-tab@2.png';
 import DeskMonkeyImg1x from '../../img/about/about-monkey-deck.png';
 import DeskMonkeyImg2x from '../../img/about/about-monkey-deck@2.png';
 import { AddSharp } from '../../img/icons/Icons';
+import MovingBaner from '../MovingBaner/MovingBaner';
 
 function About() {
   return (
@@ -52,6 +53,7 @@ function About() {
           />
           <img src={DeskMonkeyImg1x} alt="monkey wearing glasses" />
         </picture>
+        <MovingBaner />
       </div>
     </section>
   );
