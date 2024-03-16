@@ -21,7 +21,6 @@ export const MenuItem = styled.li`
   height: 48px;
   border-radius: 8px;
   backdrop-filter: blur(12px);
-  background: rgba(30, 30, 30, 0.1);
   cursor: pointer;
 
   a {
@@ -178,6 +177,11 @@ export const NavMenu = styled.nav<{ isScrolled: boolean }>`
     &:focus {
       color: ${({ isScrolled }) =>
         isScrolled ? 'var(--accent-color)' : 'var(--main-font-color)'};
+    }
+  }
+  li {
+    background: ${({ isScrolled }) =>
+      isScrolled ? 'rgba(255, 255, 255, 0.1)' : 'rgba(30, 30, 30, 0.1)'};
     }
   }
 
