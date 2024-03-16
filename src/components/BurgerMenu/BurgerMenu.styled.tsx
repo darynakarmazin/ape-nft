@@ -151,23 +151,25 @@ export const SocialItem = styled.li`
   }
 `;
 
-export const NavMenu = styled.nav<{ isScrolled: boolean }>`
+export const NavMenu = styled.nav<{ scroll: string }>`
   display: flex;
-  color: ${({ isScrolled }) =>
-    isScrolled ? 'var(--main-font-color)' : 'var(--secondary-font-color)'};
+  color: ${({ scroll }) =>
+    scroll === 'true'
+      ? 'var(--main-font-color)'
+      : 'var(--secondary-font-color)'};
   a {
     svg {
       path {
-        fill: ${({ isScrolled }) =>
-          isScrolled
+        fill: ${({ scroll }) =>
+          scroll === 'true'
             ? 'var(--main-font-color)'
             : 'var(--secondary-font-color)'};
       }
     }
     &:hover path,
     &:focus path {
-      fill: ${({ isScrolled }) =>
-        isScrolled ? 'var(--accent-color)' : 'var(--main-font-color)'};
+      fill: ${({ scroll }) =>
+        scroll === 'true' ? 'var(--accent-color)' : 'var(--main-font-color)'};
     }
   }
 
@@ -175,13 +177,13 @@ export const NavMenu = styled.nav<{ isScrolled: boolean }>`
   button {
     &:hover,
     &:focus {
-      color: ${({ isScrolled }) =>
-        isScrolled ? 'var(--accent-color)' : 'var(--main-font-color)'};
+      color: ${({ scroll }) =>
+        scroll === 'true' ? 'var(--accent-color)' : 'var(--main-font-color)'};
     }
   }
   li {
-    background: ${({ isScrolled }) =>
-      isScrolled ? 'rgba(255, 255, 255, 0.1)' : 'rgba(30, 30, 30, 0.1)'};
+    background: ${({ scroll }) =>
+      scroll === 'true' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(30, 30, 30, 0.1)'};
     }
   }
 

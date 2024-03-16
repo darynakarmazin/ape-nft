@@ -168,14 +168,14 @@ export const AddSharp = ({ style }: StyleProps): ReactElement => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M17.8334 7.22716L7.22683 17.8338L6.16617 16.7731L16.7728 6.1665L17.8334 7.22716Z"
         fill="white"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M7.22723 6.1665L17.8338 16.7731L16.7732 17.8338L6.16657 7.22716L7.22723 6.1665Z"
         fill="white"
       />
