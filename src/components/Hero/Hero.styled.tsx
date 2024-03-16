@@ -78,7 +78,6 @@ export const HeroPicture = styled.picture`
     left: 206px;
     margin-bottom: 0;
   }
-
   @media screen and (min-width: 1280px) {
     left: 365px;
   }

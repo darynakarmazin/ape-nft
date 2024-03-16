@@ -4,11 +4,11 @@ export const HeaderSection = styled.header`
   position: absolute;
   z-index: 10;
   top: 54px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   @media screen and (min-width: 768px) {
   }
-
   @media screen and (min-width: 1280px) {
     top: 16px;
   }
@@ -21,9 +21,9 @@ export const HeaderContainer = styled.div`
   @media screen and (min-width: 768px) {
     padding: 12px;
   }
-
   @media screen and (min-width: 1280px) {
     padding: 24px;
+    width: 1248px;
   }
 `;
 
