@@ -6,7 +6,10 @@ import { HeaderContainer, HeaderSection, LogoLink } from './Header.styled';
 function Header() {
   return (
     <HeaderSection>
-      <div className="container">
+      <div
+        className="container"
+        style={{ display: 'flex', justifyContent: 'center' }}
+      >
         <HeaderContainer>
           <LogoLink href="/" aria-label="Logo link to main page">
             <Logo />

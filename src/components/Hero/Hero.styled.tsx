@@ -3,6 +3,7 @@ import '../../fonts/fonts.css';
 
 export const HeroSection = styled.section`
   position: relative;
+  width: 100%;
   height: 542px;
   margin-top: 54px;
   display: flex;
@@ -79,7 +80,8 @@ export const HeroPicture = styled.picture`
     margin-bottom: 0;
   }
   @media screen and (min-width: 1280px) {
-    left: 365px;
+    left: 50%;
+    transform: translateX(-55%);
   }
 `;
 
