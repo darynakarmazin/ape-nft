@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import faqData from '../../data/faqData.json';
+import { faqData } from '../../data/faqData';
 import {
   FaqAnsver,
   FaqButton,
+  FaqImg,
   FaqList,
   FaqListItem,
   FaqQuestion,
@@ -28,6 +29,11 @@ function FAQ() {
               key={index}
               $active={openIndex === index ? 'active' : 'not active'}
             >
+              <FaqImg
+                src={item.image}
+                alt="Monkey view"
+                $active={openIndex === index ? 'active' : 'not active'}
+              />
               <FaqButton
                 type="button"
                 aria-label="Toggle answer"

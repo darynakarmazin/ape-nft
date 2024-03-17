@@ -41,7 +41,9 @@ export const FaqTitle = styled.h2`
 
 export const FaqList = styled.ul`
   display: flex;
+  width: 100%;
   flex-direction: column;
+  align-items: flex-start;
   gap: 8px;
   @media screen and (min-width: 768px) {
     gap: 18px;
@@ -58,6 +60,7 @@ export const FaqListItem = styled.li<{ $active: string }>`
   justify-content: center;
   padding: 8px;
   border-radius: 12px;
+  width: 100%;
   background-color: ${({ $active }) =>
     $active === 'active' ? 'var(--secondary-background-color)' : 'transparent'};
   &:hover h3,
@@ -70,10 +73,29 @@ export const FaqListItem = styled.li<{ $active: string }>`
   }
 
   @media screen and (min-width: 768px) {
+    position: relative;
+    justify-content: flex-end;
     gap: 24px;
   }
   @media screen and (min-width: 1280px) {
-    gap: 31px;
+  }
+`;
+
+export const FaqImg = styled.img<{ $active: string }>`
+  display: none;
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    left: 20px;
+    top: -10px;
+    display: ${({ $active }) => ($active === 'active' ? 'block' : 'none')};
+    width: 148px;
+    height: 183px;
+    transform: rotate(-16deg);
+  }
+  @media screen and (min-width: 1280px) {
+    width: 248px;
+    height: 282px;
+    transform: rotate(-8deg);
   }
 `;
 
@@ -92,10 +114,16 @@ export const FaqButton = styled.button<{ $active: string }>`
   width: 23px;
   height: 20px;
   @media screen and (min-width: 768px) {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 27px;
     width: 30px;
     height: 27px;
   }
   @media screen and (min-width: 1280px) {
+    margin-top: 12px;
+    font-size: 24px;
+    line-height: 40px;
     width: 45px;
     height: 40px;
   }
@@ -103,12 +131,14 @@ export const FaqButton = styled.button<{ $active: string }>`
 
 export const FaqQuestionWrapper = styled.div`
   display: flex;
-  width: 169px;
+  min-width: 169px;
   flex-direction: column;
   gap: 10px;
   @media screen and (min-width: 768px) {
+    width: 339px;
   }
   @media screen and (min-width: 1280px) {
+    width: 635px;
     gap: 24px;
   }
 `;
