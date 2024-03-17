@@ -1,4 +1,5 @@
-import GridGallery from '../GridGallery/GridGallery';
+import GridGallery from '../../components/GridGallery/GridGallery';
+import MindSlider from '../../components/MindSlider/MindSlider';
 import { MindMapSection, MindMapTitle } from './MindMap.styles';
 
 function MindMap() {
@@ -6,6 +7,7 @@ function MindMap() {
     <MindMapSection id="m-map">
       <div className="content-container">
         <MindMapTitle>MindMap</MindMapTitle>
+        <MindSlider />
         <GridGallery />
       </div>
     </MindMapSection>

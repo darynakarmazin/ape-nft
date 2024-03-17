@@ -105,10 +105,11 @@ export const CardText = styled.p`
   font-weight: 400;
   line-height: 14px;
   letter-spacing: 0%;
+  margin-left: auto;
+  width: 192px;
   text-align: left;
   text-transform: uppercase;
   @media screen and (min-width: 768px) {
-    margin-left: auto;
     width: 128px;
   }
   @media screen and (min-width: 1280px) {

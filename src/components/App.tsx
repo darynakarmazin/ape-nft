@@ -1,7 +1,7 @@
-import About from './About/About';
-import Header from './Header/Header';
-import Hero from './Hero/Hero';
-import MindMap from './MindMap/MindMap';
+import About from '../sections/About/About';
+import Header from '../sections/Header/Header';
+import Hero from '../sections/Hero/Hero';
+import MindMap from '../sections/MindMap/MindMap';
 
 function App() {
   return (

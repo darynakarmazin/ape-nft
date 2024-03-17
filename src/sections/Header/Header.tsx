@@ -1,6 +1,6 @@
 import { Logo } from '../../img/icons/Icons';
 import '../../fonts/fonts.css';
-import BurgerMenu from '../BurgerMenu/BurgerMenu';
+import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
 import { HeaderContainer, HeaderSection, LogoLink } from './Header.styled';
 import { useEffect, useState } from 'react';
 
