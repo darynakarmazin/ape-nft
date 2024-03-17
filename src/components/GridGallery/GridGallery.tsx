@@ -1,5 +1,12 @@
-import { Card, CardText, CardTitle, GridContainer } from './GridGallery.module';
+import {
+  Card,
+  CardText,
+  CardTitle,
+  GridContainer,
+  LinkCard,
+} from './GridGallery.module';
 import cardsData from '../../data/cardsData.json';
+import { UpLeftArrow } from '../../img/icons/Icons';
 
 function GridGallery() {
   return (
@@ -10,6 +17,18 @@ function GridGallery() {
           <CardTitle>{card.title}</CardTitle>
         </Card>
       ))}
+      <LinkCard
+        href="https://internship.softryzen.com/"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        <UpLeftArrow />
+        <CardTitle>
+          Learn <br />
+          more <br />
+          in mind map
+        </CardTitle>
+      </LinkCard>
     </GridContainer>
   );
 }
