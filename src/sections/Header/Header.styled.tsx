@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const HeaderSection = styled.header`
   position: fixed;
   z-index: 10;
+  pointer-events: none;
   top: 54px;
   left: 50%;
   transform: translateX(-50%);
@@ -29,6 +30,7 @@ export const HeaderContainer = styled.div`
 `;
 
 export const LogoLink = styled.a`
+  pointer-events: auto;
   padding: 8px 0;
   svg {
     width: 48px;

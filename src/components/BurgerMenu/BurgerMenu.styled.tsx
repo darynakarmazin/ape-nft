@@ -152,6 +152,7 @@ export const SocialItem = styled.li`
 `;
 
 export const NavMenu = styled.nav<{ $scroll: string }>`
+  pointer-events: auto; 
   display: flex;
   color: ${({ $scroll }) =>
     $scroll === 'true'
