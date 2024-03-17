@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ape-nft/static/css/main.605ff874.css",
-    "main.js": "/ape-nft/static/js/main.76acb648.js",
+    "main.css": "/ape-nft/static/css/main.3296d79d.css",
+    "main.js": "/ape-nft/static/js/main.630049af.js",
     "static/media/about-monkey-deck@2.png": "/ape-nft/static/media/about-monkey-deck@2.14a8308e89c6fd613bf9.png",
     "static/media/hero-monkey-deck@2.png": "/ape-nft/static/media/hero-monkey-deck@2.8b66b82224cef936159c.png",
     "static/media/BiroScriptPlus.ttf": "/ape-nft/static/media/BiroScriptPlus.8f40d0e26da891712200.ttf",
@@ -20,11 +20,11 @@
     "static/media/RightGrotesk-Medium.otf": "/ape-nft/static/media/RightGrotesk-Medium.8623e3fbb1e0b6d0b84f.otf",
     "static/media/MessinaSansMono-Regular.ttf": "/ape-nft/static/media/MessinaSansMono-Regular.b289391c577f8fd447dd.ttf",
     "index.html": "/ape-nft/index.html",
-    "main.605ff874.css.map": "/ape-nft/static/css/main.605ff874.css.map",
-    "main.76acb648.js.map": "/ape-nft/static/js/main.76acb648.js.map"
+    "main.3296d79d.css.map": "/ape-nft/static/css/main.3296d79d.css.map",
+    "main.630049af.js.map": "/ape-nft/static/js/main.630049af.js.map"
   },
   "entrypoints": [
-    "static/css/main.605ff874.css",
-    "static/js/main.76acb648.js"
+    "static/css/main.3296d79d.css",
+    "static/js/main.630049af.js"
   ]
 }
