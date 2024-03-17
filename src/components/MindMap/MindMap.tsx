@@ -2,8 +2,10 @@ import { MindMapSection, MindMapTitle } from './MindMap.styles';
 
 function MindMap() {
   return (
-    <MindMapSection>
-      <MindMapTitle>MindMap</MindMapTitle>
+    <MindMapSection id="m-map">
+      <div className="content-container">
+        <MindMapTitle>MindMap</MindMapTitle>
+      </div>
     </MindMapSection>
   );
 }

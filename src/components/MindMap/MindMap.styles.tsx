@@ -2,18 +2,18 @@ import styled from 'styled-components';
 
 export const MindMapSection = styled.section`
   width: 100%;
-  margin-top: 60px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: var(--main-font-color);
-  padding: 0 64px;
+  padding: 30px 64px 0;
   @media screen and (min-width: 768px) {
-    padding: 0 72px;
+    padding: 30px 72px 0;
     margin-top: 80px;
   }
   @media screen and (min-width: 1280px) {
-    padding: 0 84px 0 78px;
+    padding: 30px 84px 0 78px;
     margin-top: 120px;
   }
 `;
@@ -28,7 +28,13 @@ export const MindMapTitle = styled.h2`
   text-transform: uppercase;
   margin-bottom: 24px;
   @media screen and (min-width: 768px) {
+    font-size: 80px;
+    line-height: 80px;
+    margin-bottom: 40px;
   }
   @media screen and (min-width: 1280px) {
+    font-size: 160px;
+    line-height: 160px;
+    margin-bottom: 80px;
   }
 `;
