@@ -34,7 +34,7 @@ export const Card = styled.li`
   }
 `;
 
-export const LinkCard = styled.a`
+export const LinkCard = styled.li`
   padding: 24px 12px;
   border-radius: 12px;
   display: flex;
@@ -46,14 +46,22 @@ export const LinkCard = styled.a`
   position: relative;
   &:hover svg,
   &:focus svg {
-    top: 12px;
-    right: 12px;
+    top: 0;
+    right: 0;
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
   }
 
   svg {
     position: absolute;
-    top: 24px;
-    right: 24px;
+    top: 12px;
+    right: 12px;
     margin-left: auto;
     width: 48px;
     height: 48px;

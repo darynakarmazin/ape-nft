@@ -17,17 +17,19 @@ function GridGallery() {
           <CardTitle>{card.title}</CardTitle>
         </Card>
       ))}
-      <LinkCard
-        href="https://internship.softryzen.com/"
-        target="_blank"
-        rel="noopener noreferrer nofollow"
-      >
-        <UpLeftArrow />
-        <CardTitle>
-          Learn <br />
-          more <br />
-          in mind map
-        </CardTitle>
+      <LinkCard>
+        <a
+          href="https://internship.softryzen.com/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <UpLeftArrow />
+          <CardTitle>
+            Learn <br />
+            more <br />
+            in mind map
+          </CardTitle>
+        </a>
       </LinkCard>
     </GridContainer>
   );
