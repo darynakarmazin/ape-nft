@@ -86,14 +86,18 @@ export const IconWrapper = styled.div`
 `;
 
 export const AboutImg = styled.picture`
-img{
-  display: block;
-  margin: 0 auto;
-}
+  img {
+    display: block;
+    margin: 0 auto;
+  }
 
   @media screen and (min-width: 768px) {
- 
-  @media screen and (min-width: 1280px) {
+    img {
+      display: block;
+      margin: 0 0 0 auto;
+    }
+  }
 
+  @media screen and (min-width: 1280px) {
   }
 `;
