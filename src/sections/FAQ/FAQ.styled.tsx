@@ -51,11 +51,24 @@ export const FaqList = styled.ul`
   }
 `;
 
-export const FaqListItem = styled.li`
+export const FaqListItem = styled.li<{ $active: string }>`
   display: flex;
   gap: 8px;
   align-items: flex-start;
   justify-content: center;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: ${({ $active }) =>
+    $active === 'active' ? 'var(--secondary-background-color)' : 'transparent'};
+  &:hover h3,
+  &:focus h3 {
+    color: var(--accent-color);
+  }
+  h3 {
+    color: ${({ $active }) =>
+      $active === 'active' ? 'var(--accent-color)' : 'var(--main-font-color)'};
+  }
+
   @media screen and (min-width: 768px) {
     gap: 24px;
   }
@@ -64,10 +77,11 @@ export const FaqListItem = styled.li`
   }
 `;
 
-export const FaqButton = styled.button`
+export const FaqButton = styled.button<{ $active: string }>`
   border: none;
   background: transparent;
-  color: var(--accent-color);
+  color: ${({ $active }) =>
+    $active === 'active' ? 'var(--main-font-color)' : 'var(--accent-color)'};
   font-family: 'BiroScript-PlusBold';
   font-size: 12px;
   font-weight: 400;
@@ -91,23 +105,42 @@ export const FaqQuestionWrapper = styled.div`
   width: 169px;
   flex-direction: column;
   gap: 10px;
-
   @media screen and (min-width: 768px) {
   }
-
   @media screen and (min-width: 1280px) {
     gap: 24px;
   }
 `;
 
-export const FaqQuestion = styled.p`
+export const FaqQuestion = styled.h3`
+  cursor: pointer;
+  color: var(--main-font-color);
+  font-family: 'RightGrotesk-CompactBlack';
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+  transition: all var(--transition-dur-and-func);
   @media screen and (min-width: 768px) {
+    font-size: 32px;
+    line-height: 32px;
   }
   @media screen and (min-width: 1280px) {
+    font-size: 64px;
+    line-height: 64px;
   }
 `;
 
 export const FaqAnsver = styled.p`
+  font-family: 'MessinaSansMono-Regular';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
   @media screen and (min-width: 768px) {
   }
   @media screen and (min-width: 1280px) {

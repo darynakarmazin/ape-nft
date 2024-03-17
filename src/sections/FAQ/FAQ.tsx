@@ -24,11 +24,15 @@ function FAQ() {
         <FaqTitle>FAQ</FaqTitle>
         <FaqList>
           {faqData.map((item, index) => (
-            <FaqListItem key={index}>
+            <FaqListItem
+              key={index}
+              $active={openIndex === index ? 'active' : 'not active'}
+            >
               <FaqButton
                 type="button"
                 aria-label="Toggle answer"
                 onClick={() => handleToggle(index)}
+                $active={openIndex === index ? 'active' : 'not active'}
               >
                 {item.queue}
               </FaqButton>
