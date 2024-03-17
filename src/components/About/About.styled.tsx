@@ -7,13 +7,13 @@ export const AboutSection = styled.section`
   flex-direction: column;
   align-items: center;
   color: var(--main-font-color);
-  padding: 0 64px;
+  padding: 0 64px 52px;
   @media screen and (min-width: 768px) {
-    padding: 0 72px;
+    padding: 0 72px 52px;
     margin-top: 80px;
   }
   @media screen and (min-width: 1280px) {
-    padding: 0 84px 0 78px;
+    padding: 0 84px 86px 78px;
     margin-top: 120px;
   }
 `;
