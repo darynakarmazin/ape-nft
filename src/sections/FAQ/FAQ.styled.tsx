@@ -80,6 +80,7 @@ export const FaqListItem = styled.li<{ $active: string }>`
 export const FaqButton = styled.button<{ $active: string }>`
   border: none;
   background: transparent;
+  margin-top: 4px;
   color: ${({ $active }) =>
     $active === 'active' ? 'var(--main-font-color)' : 'var(--accent-color)'};
   font-family: 'BiroScript-PlusBold';
