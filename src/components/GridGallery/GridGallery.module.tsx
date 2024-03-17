@@ -47,7 +47,7 @@ export const LinkCard = styled.a`
   &:hover svg,
   &:focus svg {
     top: 12px;
-    left: 12px;
+    right: 12px;
   }
 
   svg {
