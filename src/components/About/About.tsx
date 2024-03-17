@@ -12,13 +12,15 @@ import {
   AboutSection,
   AboutTitle,
   IconWrapper,
+  SecondPartWrapper,
+  TitleWrapper,
 } from './About.styled';
 
 function About() {
   return (
     <AboutSection id="about">
       <div className="content-container">
-        <div>
+        <TitleWrapper>
           <AboutTitle>
             a Story that started with{' '}
             <span>
@@ -28,10 +30,11 @@ function About() {
           </AboutTitle>
           <AboutDescription>
             WHO GOT FED UP WITH BORING AND HYPOCRITIC COMMONPLACE THIS IS HOW
-            THE IDEA OF ESCAPING AND DYNAMIC JOURNEY ON THE YACHT
+            THE IDEA OF ESCAPING AND DYNAMIC JOURNEY ON THE <br />
+            YACHT
           </AboutDescription>
-        </div>
-        <div>
+        </TitleWrapper>
+        <SecondPartWrapper>
           <IconWrapper>
             <AddSharp />
             <p>
@@ -46,8 +49,8 @@ function About() {
           ${DeskMonkeyImg1x} 1x,
           ${DeskMonkeyImg2x} 2x
         `}
-              width="463"
-              height="612"
+              width="492"
+              height="662"
             />
             <source
               media="(min-width: 768px)"
@@ -55,8 +58,8 @@ function About() {
           ${TabMonkeyImg1x} 1x,
           ${TabMonkeyImg2x} 2x
         `}
-              width="283"
-              height="386"
+              width="313"
+              height="422"
             />
             <source
               media="(max-width: 767px)"
@@ -67,7 +70,7 @@ function About() {
             />
             <img src={DeskMonkeyImg1x} alt="monkey wearing glasses" />
           </AboutImg>
-        </div>
+        </SecondPartWrapper>
         <MovingBaner />
       </div>
     </AboutSection>

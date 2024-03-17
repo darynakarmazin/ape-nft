@@ -13,8 +13,17 @@ export const AboutSection = styled.section`
     margin-top: 80px;
   }
   @media screen and (min-width: 1280px) {
-    padding: 0 81px;
+    padding: 0 84px 0 78px;
     margin-top: 120px;
+  }
+`;
+
+export const TitleWrapper = styled.div`
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 48px;
+  }
+  @media screen and (min-width: 1280px) {
   }
 `;
 
@@ -31,8 +40,11 @@ export const AboutTitle = styled.h2`
     color: var(--accent-color);
   }
   @media screen and (min-width: 768px) {
+    flex-direction: column;
+    flex: 1;
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 68px;
     br {
       display: none;
     }
@@ -54,11 +66,31 @@ export const AboutDescription = styled.p`
   text-transform: uppercase;
   margin-bottom: 36px;
   text-indent: 136px;
+  br {
+    display: none;
+  }
   @media screen and (min-width: 768px) {
+    width: 275px;
+    text-indent: 0;
+    margin-top: 16px;
+    br {
+      display: block;
+    }
   }
   @media screen and (min-width: 1280px) {
+    width: 409px;
     font-size: 24px;
     line-height: 29px;
+    margin-top: 24px;
+  }
+`;
+
+export const SecondPartWrapper = styled.div`
+  @media screen and (min-width: 768px) {
+    position: relative;
+    display: flex;
+  }
+  @media screen and (min-width: 1280px) {
   }
 `;
 
@@ -80,8 +112,26 @@ export const IconWrapper = styled.div`
   }
 
   @media screen and (min-width: 768px) {
+    width: 269px;
+    gap: 24px;
+    margin-bottom: 36px;
+    p {
+      font-size: 16px;
+      line-height: 19px;
+    }
   }
   @media screen and (min-width: 1280px) {
+    width: 417px;
+    gap: 36px;
+    margin-bottom: 40px;
+    p {
+      font-size: 24px;
+      line-height: 29px;
+    }
+    svg {
+      width: 36px;
+      height: 36px;
+    }
   }
 `;
 
@@ -92,6 +142,9 @@ export const AboutImg = styled.picture`
   }
 
   @media screen and (min-width: 768px) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
     img {
       display: block;
       margin: 0 0 0 auto;
