@@ -1,12 +1,15 @@
-import { Card, GridContainer } from './GridGallery.module';
+import { Card, CardText, CardTitle, GridContainer } from './GridGallery.module';
+import cardsData from '../../data/cardsData.json';
 
 function GridGallery() {
   return (
     <GridContainer>
-      <Card>Картка 1</Card>
-      <Card>Картка 2</Card>
-      <Card>Картка 3</Card>
-      <Card>Картка 4</Card>
+      {cardsData.map((card, index) => (
+        <Card key={index}>
+          <CardText>{card.text}</CardText>
+          <CardTitle>{card.title}</CardTitle>
+        </Card>
+      ))}
     </GridContainer>
   );
 }
