@@ -1,16 +1,17 @@
 import GridGallery from '../../components/GridGallery/GridGallery';
 import MindSlider from '../../components/MindSlider/MindSlider';
-import { MindMapSection, MindMapTitle } from './MindMap.styles';
+import { Section } from '../../components/Section/Section.styled';
+import { Title } from '../../components/Title/Title.styled';
 
 function MindMap() {
   return (
-    <MindMapSection id="m-map">
+    <Section id="m-map">
       <div className="content-container">
-        <MindMapTitle>MindMap</MindMapTitle>
+        <Title>MindMap</Title>
         <MindSlider />
         <GridGallery />
       </div>
-    </MindMapSection>
+    </Section>
   );
 }
 

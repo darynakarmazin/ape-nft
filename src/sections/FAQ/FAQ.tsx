@@ -8,9 +8,9 @@ import {
   FaqListItem,
   FaqQuestion,
   FaqQuestionWrapper,
-  FaqSection,
-  FaqTitle,
 } from './FAQ.styled';
+import { Section } from '../../components/Section/Section.styled';
+import { Title } from '../../components/Title/Title.styled';
 
 function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -20,9 +20,9 @@ function FAQ() {
   };
 
   return (
-    <FaqSection id="faq">
+    <Section id="faq">
       <div className="content-container">
-        <FaqTitle>FAQ</FaqTitle>
+        <Title>FAQ</Title>
         <FaqList>
           {faqData.map((item, index) => (
             <FaqListItem
@@ -52,7 +52,7 @@ function FAQ() {
           ))}
         </FaqList>
       </div>
-    </FaqSection>
+    </Section>
   );
 }
 
