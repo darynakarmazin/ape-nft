@@ -25,6 +25,7 @@ function ContactForm() {
     () => localStorage.getItem('walletaddress') || ''
   );
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
     localStorage.setItem('username', username);
@@ -57,6 +58,7 @@ function ContactForm() {
       setUsername('');
       setWalletaddress('');
       setErrors({});
+      setSubmitted(true);
     } catch (err: any) {
       const validationErrors: Record<string, string> = {};
       err.inner.forEach((error: any) => {
@@ -95,7 +97,11 @@ function ContactForm() {
         </LabelWallet>
 
         <Button type="submit" aria-label="Send">
-          {Object.keys(errors).length > 0 ? 'ERROR' : 'MINT'}
+          {submitted
+            ? 'MINTED'
+            : Object.keys(errors).length > 0
+            ? 'ERROR'
+            : 'MINT'}
         </Button>
       </Form>
       <ToastContainer theme="dark" />
