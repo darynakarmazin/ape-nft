@@ -1,3 +1,4 @@
+import scrollLock from 'scroll-lock';
 import { Logo } from '../../img/icons/Icons';
 import '../../fonts/fonts.css';
 import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
@@ -7,7 +8,7 @@ import MobileMenu from '../../components/MobileMenu/MobileMenu';
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +23,7 @@ function Header() {
 
   const handleModalOpen = () => {
     setIsMobileMenuOpen(true);
+    scrollLock.disablePageScroll(document.body);
   };
 
   return (

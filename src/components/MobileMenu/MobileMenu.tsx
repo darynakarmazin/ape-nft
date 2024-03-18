@@ -1,3 +1,4 @@
+import scrollLock from 'scroll-lock';
 import React, { useState, useEffect } from 'react';
 import {
   Backdrop,
@@ -19,6 +20,8 @@ function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen }: Props) {
 
   const handleModalClose = () => {
     setIsMobileMenuOpen(false);
+    scrollLock.clearQueueScrollLocks();
+    scrollLock.enablePageScroll();
   };
 
   const handleOverlyClick = (e: React.MouseEvent<HTMLDivElement>) => {
