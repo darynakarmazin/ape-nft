@@ -47,66 +47,76 @@ export const Modal = styled.div`
   top: 50%;
   left: 50%;
   transform: scale(1) translate(-50%, -50%);
-  padding-top: 70px;
-  padding-bottom: 24px;
+  padding-top: 54px;
   height: 100vh;
   transition: all var(--transition-dur-and-func);
 `;
 
 export const ModalContent = styled.div`
-  padding: 0 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
   width: 100%;
   height: 100%;
-  border-radius: 25px;
-  background: red;
 `;
 
-export const ButtonClose = styled.button`
+export const ModalHeader = styled.div`
   display: flex;
-  gap: 4px;
-  align-items: center;
-  color: #fff;
-  background: transparent;
-  border: none;
-  font-family: var(--main-font);
-  font-size: 20px;
-  letter-spacing: -0.8px;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  a {
+    svg {
+      path {
+        fill: var(--main-font-color);
+      }
+    }
+  }
 `;
 
 export const ModalList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 `;
 
 export const ModalItem = styled.li`
-  color: rgba(255, 255, 255, 0.25);
-  font-family: var(--main-font);
+  color: var(--main-font-color);
+  font-family: 'MessinaSansMono-Regular';
   font-size: 24px;
-  letter-spacing: -0.96px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+`;
+
+export const MenuList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+export const MenuItem = styled.li`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
   a {
-    div {
-      display: flex;
-      gap: 8px;
-    }
-  }
-  svg path {
-    stroke: rgba(255, 255, 255, 0.25);
-  }
-
-  .active {
-    color: var(--hover-items-color);
-    svg path {
-      stroke: var(--hover-items-color);
-    }
-  }
-
-  &:hover {
-    a {
-      color: #fff;
-      svg path {
-        stroke: #fff;
+    svg {
+      width: 16px;
+      height: 16px;
+      path {
+        fill: var(--main-font-color);
       }
     }
   }
+`;
+
+export const BottomPart = styled.div`
+  margin-top: auto;
 `;

@@ -1,14 +1,20 @@
 import scrollLock from 'scroll-lock';
 import React, { useState, useEffect } from 'react';
+import Footer from '../../sections/Footer/Footer';
+import { LogoLink } from '../../sections/Header/Header.styled';
+import { Discord, Logo, Opensea, Twitter } from '../../img/icons/Icons';
 import {
   Backdrop,
-  ButtonClose,
+  BottomPart,
+  MobileMenuBtn,
   Modal,
   ModalContent,
+  ModalHeader,
   ModalItem,
   ModalList,
+  MenuItem,
+  MenuList,
 } from './MobileMenu.styled';
-import Footer from '../../sections/Footer/Footer';
 
 interface Props {
   isMobileMenuOpen: boolean;
@@ -23,27 +29,6 @@ function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen }: Props) {
     scrollLock.clearQueueScrollLocks();
     scrollLock.enablePageScroll();
   };
-
-  const handleOverlyClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (e.currentTarget === e.target) {
-      handleModalClose();
-    }
-  };
-
-  useEffect(() => {
-    const handleOnClose = (e: KeyboardEvent) => {
-      if (e.code === 'Escape') {
-        handleModalClose();
-      }
-    };
-
-    window.addEventListener('keydown', handleOnClose);
-
-    return () => {
-      window.removeEventListener('keydown', handleOnClose);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   useEffect(() => {
     const sectionIds = ['about', 'm-map', 'faq', 'arts', 'mint'];
@@ -70,66 +55,104 @@ function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen }: Props) {
   return (
     <>
       {isMobileMenuOpen && (
-        <Backdrop onClick={handleOverlyClick}>
-          <Modal className="container" onClick={handleOverlyClick}>
+        <Backdrop>
+          <Modal className="container">
             <ModalContent>
-              <ButtonClose
-                onClick={handleModalClose}
-                aria-label="button for closing menu"
-              >
-                close
-              </ButtonClose>
-
-              <div>
-                <ModalList>
-                  <ModalItem>
-                    <a
-                      href="#about"
+              <ModalHeader>
+                <LogoLink href="/" aria-label="Logo link to main page">
+                  <Logo />
+                </LogoLink>
+                <MenuList>
+                  <MenuItem>
+                    <MobileMenuBtn
                       onClick={handleModalClose}
-                      className={activeSection === 'about' ? 'active' : ''}
+                      aria-label="button for closing menu"
                     >
-                      ABOUT
-                    </a>
-                  </ModalItem>
-                  <ModalItem>
+                      CLOSE
+                    </MobileMenuBtn>
+                  </MenuItem>
+                  <MenuItem>
                     <a
-                      href="#m-map"
-                      onClick={handleModalClose}
-                      className={activeSection === 'm-map' ? 'active' : ''}
+                      href="https://discord.com/"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      aria-label="a link to the company's Discord page"
                     >
-                      M-MAP
+                      <Discord />
                     </a>
-                  </ModalItem>
-                  <ModalItem>
+                  </MenuItem>
+                  <MenuItem>
                     <a
-                      href="#faq"
-                      onClick={handleModalClose}
-                      className={activeSection === 'faq' ? 'active' : ''}
+                      href="https://opensea.io/"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      aria-label="a link to the company's Opensea page"
                     >
-                      FAQ
+                      <Opensea />
                     </a>
-                  </ModalItem>
-                  <ModalItem>
+                  </MenuItem>
+                  <MenuItem>
                     <a
-                      href="#arts"
-                      onClick={handleModalClose}
-                      className={activeSection === 'arts' ? 'active' : ''}
+                      href="https://twitter.com/"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      aria-label="a link to the company's Twitter page"
                     >
-                      ARTS
+                      <Twitter />
                     </a>
-                  </ModalItem>
-                  <ModalItem>
-                    <a
-                      href="#mint"
-                      onClick={handleModalClose}
-                      className={activeSection === 'mint' ? 'active' : ''}
-                    >
-                      MINT
-                    </a>
-                  </ModalItem>
-                </ModalList>
-              </div>
-              <Footer />
+                  </MenuItem>
+                </MenuList>
+              </ModalHeader>
+              <ModalList>
+                <ModalItem>
+                  <a
+                    href="#about"
+                    onClick={handleModalClose}
+                    className={activeSection === 'about' ? 'active' : ''}
+                  >
+                    ABOUT
+                  </a>
+                </ModalItem>
+                <ModalItem>
+                  <a
+                    href="#m-map"
+                    onClick={handleModalClose}
+                    className={activeSection === 'm-map' ? 'active' : ''}
+                  >
+                    M-MAP
+                  </a>
+                </ModalItem>
+                <ModalItem>
+                  <a
+                    href="#faq"
+                    onClick={handleModalClose}
+                    className={activeSection === 'faq' ? 'active' : ''}
+                  >
+                    FAQ
+                  </a>
+                </ModalItem>
+                <ModalItem>
+                  <a
+                    href="#arts"
+                    onClick={handleModalClose}
+                    className={activeSection === 'arts' ? 'active' : ''}
+                  >
+                    ARTS
+                  </a>
+                </ModalItem>
+                <ModalItem>
+                  <a
+                    href="#mint"
+                    onClick={handleModalClose}
+                    className={activeSection === 'mint' ? 'active' : ''}
+                  >
+                    MINT
+                  </a>
+                </ModalItem>
+              </ModalList>
+              <BottomPart>
+                <Footer />
+              </BottomPart>
             </ModalContent>
           </Modal>
         </Backdrop>
