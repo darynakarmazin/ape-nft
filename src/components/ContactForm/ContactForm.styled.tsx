@@ -24,10 +24,30 @@ export const Label = styled.label`
 
 export const Input = styled.input<{ $hasError: string }>`
   width: 100%;
-  background-color: ${({ $hasError }) =>
-    $hasError === 'active'
-      ? 'var(--secondary-background-color)'
-      : 'transparent'};
+  height: 48px;
+  outline: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 17px 24px 17px 72px;
+  background-color: transparent;
+  border-radius: 12px;
+  color: ${({ $hasError }) =>
+    $hasError === 'error' ? 'var(--accent-color)' : 'var(--main-font-color)'};
+  border: ${({ $hasError }) =>
+    $hasError === 'error'
+      ? '1px solid var(--accent-color)'
+      : '1px solid rgb(30, 30, 30)'};
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.24);
+  }
+  &:focus,
+  :active {
+    border: 1px solid var(--main-font-color);
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 22.5px 24px 22.5px 88px;
+  }
 `;
 
 export const Button = styled.button`
@@ -69,6 +89,7 @@ export const ErrorSpan = styled.span`
   font-size: 10px;
   line-heigh: 1.2;
   @media screen and (min-width: 1280px) {
+    bottom: -14px;
     font-size: 12px;
     line-heigh: 1.7;
   }
