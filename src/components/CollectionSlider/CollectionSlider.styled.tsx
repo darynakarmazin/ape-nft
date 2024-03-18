@@ -43,7 +43,7 @@ export const SwiperBtn = styled.button`
   font-family: 'BiroScript-PlusBold';
   font-size: 24px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 30px;
   @media screen and (min-width: 768px) {
   }
   @media screen and (min-width: 1280px) {

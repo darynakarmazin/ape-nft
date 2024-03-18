@@ -32,11 +32,11 @@ export const FaqListItem = styled.li<{ $active: string }>`
     color: ${({ $active }) =>
       $active === 'active' ? 'var(--accent-color)' : 'var(--main-font-color)'};
   }
-
   @media screen and (min-width: 768px) {
     position: relative;
     justify-content: flex-end;
     gap: 24px;
+    padding: 24px;
   }
   @media screen and (min-width: 1280px) {
   }
@@ -136,5 +136,7 @@ export const FaqAnsver = styled.p`
   @media screen and (min-width: 768px) {
   }
   @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 19px;
   }
 `;
