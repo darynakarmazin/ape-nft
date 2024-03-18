@@ -18,13 +18,40 @@ export const Form = styled.form`
 `;
 
 export const Input = styled.input<{ $hasError: string }>`
+  position: static;
   background-color: ${({ $hasError }) =>
     $hasError === 'active'
       ? 'var(--secondary-background-color)'
       : 'transparent'};
 `;
 
-export const Button = styled.button``;
+export const Button = styled.button`
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  backdrop-filter: blur(12px);
+  background: var(--accent-color);
+  padding: 10px 91.5px 12px;
+  color: var(--main-font-color);
+  font-family: 'RightGrotesk-CompactBlack';
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.19;
+  &:hover,
+  :focus {
+    color: var(--secondary-font-color);
+  }
+  @media screen and (min-width: 768px) {
+    padding: 10px 107px 12px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 16px 170px 20px;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+`;
 
 export const ErrorSpan = styled.span`
   color: #d28b8b;

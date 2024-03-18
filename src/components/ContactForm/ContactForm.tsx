@@ -82,7 +82,7 @@ function ContactForm() {
         {errors.walletaddress && <ErrorSpan>{errors.walletaddress}</ErrorSpan>}
 
         <Button type="submit" aria-label="Send">
-          MINT
+          {Object.keys(errors).length > 0 ? 'ERROR' : 'MINT'}
         </Button>
       </Form>
       <ToastContainer theme="dark" />
