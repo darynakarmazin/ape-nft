@@ -11,6 +11,7 @@ import {
 } from './FAQ.styled';
 import { Section } from '../../components/Section/Section.styled';
 import { Title } from '../../components/Title/Title.styled';
+import { ContentContainer } from '../../components/ContentContainer/ContentContainer.styles';
 
 function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -21,7 +22,7 @@ function FAQ() {
 
   return (
     <Section id="faq">
-      <div className="content-container">
+      <ContentContainer>
         <Title>FAQ</Title>
         <FaqList>
           {faqData.map((item, index) => (
@@ -51,7 +52,7 @@ function FAQ() {
             </FaqListItem>
           ))}
         </FaqList>
-      </div>
+      </ContentContainer>
     </Section>
   );
 }

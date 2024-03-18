@@ -14,11 +14,12 @@ import {
   HeroTitle,
   TextWrapper,
 } from './Hero.styled';
+import { ContentContainer } from '../../components/ContentContainer/ContentContainer.styles';
 
 function Hero() {
   return (
     <HeroSection>
-      <div className="content-container">
+      <ContentContainer>
         <HeroQuestion>diD yOu seE iT ?</HeroQuestion>
         <HeroTitle>YACHT APES</HeroTitle>
         <TextWrapper>
@@ -59,7 +60,7 @@ function Hero() {
             </HeroDescription>
           </DeckWrapper>
         </TextWrapper>
-      </div>
+      </ContentContainer>
     </HeroSection>
   );
 }

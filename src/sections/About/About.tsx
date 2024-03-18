@@ -15,11 +15,12 @@ import {
   SecondPartWrapper,
   TitleWrapper,
 } from './About.styled';
+import { ContentContainer } from '../../components/ContentContainer/ContentContainer.styles';
 
 function About() {
   return (
     <AboutSection id="about">
-      <div className="content-container">
+      <ContentContainer>
         <TitleWrapper>
           <AboutTitle>
             a Story that started with{' '}
@@ -72,7 +73,7 @@ function About() {
           </AboutImg>
         </SecondPartWrapper>
         <MovingBaner />
-      </div>
+      </ContentContainer>
     </AboutSection>
   );
 }
