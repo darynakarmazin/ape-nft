@@ -2,7 +2,7 @@ import * as Yup from 'yup';
 import { omit } from 'lodash';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button, ErrorSpan, Form, Input, Label } from './ContactForm.styled';
 
 const schema = Yup.object().shape({
@@ -11,9 +11,18 @@ const schema = Yup.object().shape({
 });
 
 function ContactForm() {
-  const [username, setUsername] = useState<string>('');
-  const [walletaddress, setWalletaddress] = useState<string>('');
+  const [username, setUsername] = useState<string>(
+    () => localStorage.getItem('username') || ''
+  );
+  const [walletaddress, setWalletaddress] = useState<string>(
+    () => localStorage.getItem('walletaddress') || ''
+  );
   const [errors, setErrors] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    localStorage.setItem('username', username);
+    localStorage.setItem('walletaddress', walletaddress);
+  }, [username, walletaddress]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
