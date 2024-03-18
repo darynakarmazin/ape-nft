@@ -1,16 +1,49 @@
-import MonkeyQues1 from '../img/faq/faq-1.png';
+import MonkeySlide1 from '../img/arts/monkey-slide-1.png';
+import MonkeySlide2 from '../img/arts/monkey-slide-2.png';
+import MonkeySlide3 from '../img/arts/monkey-slide-3.png';
+import MonkeySlide4 from '../img/arts/monkey-slide-4.png';
 
 export const galleryData = [
   {
-    image: MonkeyQues1,
+    image: MonkeySlide1,
   },
   {
-    image: MonkeyQues1,
+    image: MonkeySlide2,
   },
   {
-    image: MonkeyQues1,
+    image: MonkeySlide3,
   },
   {
-    image: MonkeyQues1,
+    image: MonkeySlide4,
+  },
+  {
+    image: MonkeySlide4,
+  },
+  {
+    image: MonkeySlide4,
+  },
+  {
+    image: MonkeySlide4,
+  },
+  {
+    image: MonkeySlide4,
+  },
+  {
+    image: MonkeySlide4,
+  },
+  {
+    image: MonkeySlide4,
+  },
+  {
+    image: MonkeySlide4,
+  },
+  {
+    image: MonkeySlide4,
+  },
+  {
+    image: MonkeySlide4,
+  },
+  {
+    image: MonkeySlide4,
   },
 ];
