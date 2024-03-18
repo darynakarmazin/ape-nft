@@ -3,7 +3,14 @@ import { omit } from 'lodash';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useEffect, useState } from 'react';
-import { Button, ErrorSpan, Form, Input, Label } from './ContactForm.styled';
+import {
+  Button,
+  ErrorSpan,
+  Form,
+  Input,
+  LabelDicrort,
+  LabelWallet,
+} from './ContactForm.styled';
 
 const schema = Yup.object().shape({
   username: Yup.string().required('Wrong discord'),
@@ -62,7 +69,7 @@ function ContactForm() {
   return (
     <>
       <Form onSubmit={handleSubmit}>
-        <Label>
+        <LabelDicrort $hasError={!!errors.username ? 'error' : ''}>
           <Input
             type="text"
             name="username"
@@ -72,8 +79,8 @@ function ContactForm() {
             $hasError={!!errors.username ? 'error' : ''}
           />
           {errors.username && <ErrorSpan>{errors.username}</ErrorSpan>}
-        </Label>
-        <Label>
+        </LabelDicrort>
+        <LabelWallet $hasError={!!errors.walletaddress ? 'error' : ''}>
           <Input
             type="text"
             name="walletaddress"
@@ -85,7 +92,7 @@ function ContactForm() {
           {errors.walletaddress && (
             <ErrorSpan>{errors.walletaddress}</ErrorSpan>
           )}
-        </Label>
+        </LabelWallet>
 
         <Button type="submit" aria-label="Send">
           {Object.keys(errors).length > 0 ? 'ERROR' : 'MINT'}

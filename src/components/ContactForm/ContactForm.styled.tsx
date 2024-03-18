@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import FormDiscort from '../../img/mind/form-discord.svg';
+import FormWallet from '../../img/mind/form-meta.svg';
 
 export const Form = styled.form`
   display: flex;
@@ -17,9 +19,74 @@ export const Form = styled.form`
   }
 `;
 
-export const Label = styled.label`
+export const LabelDicrort = styled.label<{ $hasError: string }>`
   position: relative;
   width: 100%;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px 0px 0px 8px;
+    backdrop-filter: blur(12px);
+    background-color: var(--secondary-background-color);
+    background-image: url(${FormDiscort});
+    background-size: 24px 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-right: ${({ $hasError }) =>
+      $hasError === 'error'
+        ? '1px solid var(--accent-color)'
+        : '1px solid rgb(30, 30, 30)'};
+  }
+  &:focus::before,
+  &:active::before {
+    border-right: 1px solid var(--main-font-color);
+  }
+  &:focus-within::before {
+    border-right: 1px solid var(--main-font-color);
+  }
+`;
+
+export const LabelWallet = styled.label<{ $hasError: string }>`
+  position: relative;
+  width: 100%;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px 0px 0px 8px;
+    backdrop-filter: blur(12px);
+    background-color: var(--secondary-background-color);
+    background-image: url(${FormWallet});
+    background-size: 24px 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-right: ${({ $hasError }) =>
+      $hasError === 'error'
+        ? '1px solid var(--accent-color)'
+        : '1px solid rgb(30, 30, 30)'};
+  }
+  &:focus::before,
+  &:active::before {
+    border-right: 1px solid var(--main-font-color);
+  }
+  &:focus-within::before {
+    border-right: 1px solid var(--main-font-color);
+  }
 `;
 
 export const Input = styled.input<{ $hasError: string }>`
@@ -42,7 +109,7 @@ export const Input = styled.input<{ $hasError: string }>`
     color: rgba(255, 255, 255, 0.24);
   }
   &:focus,
-  :active {
+  &:active {
     border: 1px solid var(--main-font-color);
   }
   @media screen and (min-width: 1280px) {
