@@ -4,7 +4,7 @@ export const Title = styled.h2`
   font-family: 'RightGrotesk-CompactBlack';
   font-size: 44px;
   font-weight: 900;
-  line-height: 0.09;
+  line-height: 0.9;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 24px;
