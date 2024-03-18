@@ -8,13 +8,14 @@ import {
   SocialItem,
   SocialList,
 } from './BurgerMenu.styled';
-import MobileMenu from '../MobileMenu/MobileMenu';
+import { MobileMenuBtn } from '../MobileMenu/MobileMenu.styled';
 
 interface Props {
   isScrolled: boolean;
+  handleModalOpen: () => void;
 }
 
-function BurgerMenu({ isScrolled }: Props) {
+function BurgerMenu({ isScrolled, handleModalOpen }: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
@@ -52,7 +53,6 @@ function BurgerMenu({ isScrolled }: Props) {
           </SocialItem>
         </SocialList>
       )}
-
       <MenuList>
         <MenuItem
           style={{
@@ -60,7 +60,13 @@ function BurgerMenu({ isScrolled }: Props) {
             borderBottomLeftRadius: isMenuOpen ? '0' : '8px',
           }}
         >
-          <MobileMenu />
+          <MobileMenuBtn
+            type="button"
+            aria-label="button for opening menu"
+            onClick={handleModalOpen}
+          >
+            MENU
+          </MobileMenuBtn>
           <MenuBtn type="button" onClick={handleMenuToggle}>
             {isMenuOpen ? 'CLOSE' : ' MENU'}
           </MenuBtn>

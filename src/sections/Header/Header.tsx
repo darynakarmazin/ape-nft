@@ -3,9 +3,11 @@ import '../../fonts/fonts.css';
 import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
 import { HeaderContainer, HeaderSection, LogoLink } from './Header.styled';
 import { useEffect, useState } from 'react';
+import MobileMenu from '../../components/MobileMenu/MobileMenu';
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,20 +20,33 @@ function Header() {
     };
   }, []);
 
+  const handleModalOpen = () => {
+    setIsMobileMenuOpen(true);
+  };
+
   return (
-    <HeaderSection>
-      <div
-        className="container"
-        style={{ display: 'flex', justifyContent: 'center' }}
-      >
-        <HeaderContainer>
-          <LogoLink href="/" aria-label="Logo link to main page">
-            {!isScrolled && <Logo />}
-          </LogoLink>
-          <BurgerMenu isScrolled={isScrolled} />
-        </HeaderContainer>
-      </div>
-    </HeaderSection>
+    <>
+      <HeaderSection>
+        <div
+          className="container"
+          style={{ display: 'flex', justifyContent: 'center' }}
+        >
+          <HeaderContainer>
+            <LogoLink href="/" aria-label="Logo link to main page">
+              {!isScrolled && <Logo />}
+            </LogoLink>
+            <BurgerMenu
+              isScrolled={isScrolled}
+              handleModalOpen={handleModalOpen}
+            />
+          </HeaderContainer>
+        </div>
+      </HeaderSection>
+      <MobileMenu
+        isMobileMenuOpen={isMobileMenuOpen}
+        setIsMobileMenuOpen={setIsMobileMenuOpen}
+      />
+    </>
   );
 }
 
