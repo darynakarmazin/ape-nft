@@ -18,7 +18,6 @@ export const FaqListItem = styled.li<{ $active: string }>`
   display: flex;
   gap: 8px;
   align-items: flex-start;
-  justify-content: center;
   padding: 8px;
   border-radius: 12px;
   width: 100%;
