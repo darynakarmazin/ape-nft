@@ -13,10 +13,6 @@ export const ControllersWrapper = styled.div`
   align-items: center;
   gap: 48px;
   margin-top: 24px;
-  @media screen and (min-width: 768px) {
-  }
-  @media screen and (min-width: 1280px) {
-  }
 `;
 
 export const SwiperImg = styled.img`
@@ -42,10 +38,5 @@ export const SwiperBtn = styled.button`
   color: var(--main-font-color);
   font-family: 'BiroScript-PlusBold';
   font-size: 24px;
-  font-weight: 400;
-  line-height: 30px;
-  @media screen and (min-width: 768px) {
-  }
-  @media screen and (min-width: 1280px) {
-  }
+  line-height: 1.25;
 `;

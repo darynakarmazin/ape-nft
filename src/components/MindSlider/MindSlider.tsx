@@ -1,17 +1,15 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import 'swiper/css/navigation';
-
 import cardsData from '../../data/cardsData.json';
+import { UpLeftArrow } from '../../img/icons/Icons';
 import {
   Card,
   CardText,
   CardTitle,
   LinkCard,
 } from '../GridGallery/GridGallery.module';
-import { UpLeftArrow } from '../../img/icons/Icons';
 import { ControllersWrapper, SwiperArea, SwiperBtn } from './MindSlider.styled';
 
 function MindSlider() {

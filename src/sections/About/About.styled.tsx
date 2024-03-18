@@ -23,16 +23,13 @@ export const TitleWrapper = styled.div`
     display: flex;
     gap: 48px;
   }
-  @media screen and (min-width: 1280px) {
-  }
 `;
 
 export const AboutTitle = styled.h2`
   font-family: 'RightGrotesk-CompactBlack';
   font-size: 40px;
   font-weight: 900;
-  line-height: 40px;
-  letter-spacing: 0%;
+  line-height: 1;
   text-align: left;
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -43,7 +40,7 @@ export const AboutTitle = styled.h2`
     flex-direction: column;
     flex: 1;
     font-size: 60px;
-    line-height: 60px;
+    line-height: 1;
     margin-bottom: 68px;
     br {
       display: none;
@@ -51,7 +48,7 @@ export const AboutTitle = styled.h2`
   }
   @media screen and (min-width: 1280px) {
     font-size: 120px;
-    line-height: 120px;
+    line-height: 1;
   }
 `;
 
@@ -59,9 +56,7 @@ export const AboutDescription = styled.p`
   color: rgb(255, 255, 255);
   font-family: 'MessinaSansMono-Regular';
   font-size: 16px;
-  font-weight: 400;
-  line-height: 19px;
-  letter-spacing: 0%;
+  line-height: 1.19;
   text-align: right;
   text-transform: uppercase;
   margin-bottom: 36px;
@@ -80,7 +75,7 @@ export const AboutDescription = styled.p`
   @media screen and (min-width: 1280px) {
     width: 409px;
     font-size: 24px;
-    line-height: 29px;
+    line-height: 1.2;
     margin-top: 24px;
   }
 `;

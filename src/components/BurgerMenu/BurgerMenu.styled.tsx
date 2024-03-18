@@ -4,10 +4,6 @@ export const MenuList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 8px;
-
-  @media screen and (min-width: 768px) {
-  }
-
   @media screen and (min-width: 1280px) {
     gap: 16px;
   }
@@ -22,7 +18,6 @@ export const MenuItem = styled.li`
   border-radius: 8px;
   backdrop-filter: blur(12px);
   cursor: pointer;
-
   a {
     display: flex;
     justify-content: center;
@@ -36,15 +31,10 @@ export const MenuItem = styled.li`
       }
     }
   }
-
-  @media screen and (min-width: 768px) {
-  }
-
   @media screen and (min-width: 1280px) {
     width: 80px;
     height: 80px;
     border-radius: 12px;
-
     a {
       padding: 28px;
       svg {
@@ -68,8 +58,7 @@ export const MenuBtn = styled.button`
   font-family: 'MessinaSansMono-Regular';
   font-size: 12px;
   font-weight: 600;
-  line-height: 14px;
-  letter-spacing: 0%;
+  line-height: 1.17;
   cursor: pointer;
   transition: all var(--transition-dur-and-func);
   &:hover,
@@ -77,29 +66,18 @@ export const MenuBtn = styled.button`
     color: inherit;
     text-decoration: underline;
   }
-
-  @media screen and (min-width: 768px) {
-  }
-
   @media screen and (min-width: 1280px) {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 1.19;
   }
 `;
 
 export const SocialList = styled.ul`
   display: flex;
   transition: all var(--transition-dur-and-func);
-
   li:first-child {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-  }
-
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1280px) {
   }
 `;
 
@@ -125,8 +103,7 @@ export const SocialItem = styled.li`
     font-family: 'MessinaSansMono-Regular';
     font-size: 12px;
     font-weight: 600;
-    line-height: 14px;
-    letter-spacing: 0%;
+    line-height: 1.17;
     cursor: pointer;
     transition: all var(--transition-dur-and-func);
     &:hover,
@@ -135,10 +112,6 @@ export const SocialItem = styled.li`
       text-decoration: underline;
     }
   }
-
-  @media screen and (min-width: 768px) {
-  }
-
   @media screen and (min-width: 1280px) {
     width: 80px;
     height: 80px;
@@ -146,7 +119,7 @@ export const SocialItem = styled.li`
       width: 80px;
       height: 80px;
       font-size: 16px;
-      line-height: 19px;
+      line-height: 1.19;
     }
   }
 `;
@@ -188,11 +161,5 @@ export const NavMenu = styled.nav<{ $scroll: string }>`
         ? 'rgba(255, 255, 255, 0.1)'
         : 'rgba(30, 30, 30, 0.1)'};
     }
-  }
-
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1280px) {
   }
 `;

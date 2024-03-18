@@ -1,3 +1,5 @@
+import cardsData from '../../data/cardsData.json';
+import { UpLeftArrow } from '../../img/icons/Icons';
 import {
   Card,
   CardText,
@@ -5,8 +7,6 @@ import {
   GridContainer,
   LinkCard,
 } from './GridGallery.module';
-import cardsData from '../../data/cardsData.json';
-import { UpLeftArrow } from '../../img/icons/Icons';
 
 function GridGallery() {
   return (

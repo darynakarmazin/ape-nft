@@ -37,8 +37,6 @@ export const FaqListItem = styled.li<{ $active: string }>`
     gap: 24px;
     padding: 24px;
   }
-  @media screen and (min-width: 1280px) {
-  }
 `;
 
 export const FaqImg = styled.img<{ $active: string }>`
@@ -109,18 +107,17 @@ export const FaqQuestion = styled.h3`
   font-family: 'RightGrotesk-CompactBlack';
   font-size: 20px;
   font-weight: 900;
-  line-height: 20px;
-  letter-spacing: 0%;
+  line-height: 1;
   text-align: left;
   text-transform: uppercase;
   transition: all var(--transition-dur-and-func);
   @media screen and (min-width: 768px) {
     font-size: 32px;
-    line-height: 32px;
+    line-height: 1;
   }
   @media screen and (min-width: 1280px) {
     font-size: 64px;
-    line-height: 64px;
+    line-height: 1;
   }
 `;
 
@@ -128,14 +125,11 @@ export const FaqAnsver = styled.p`
   font-family: 'MessinaSansMono-Regular';
   font-size: 12px;
   font-weight: 400;
-  line-height: 14px;
-  letter-spacing: 0%;
+  line-height: 1.17;
   text-align: left;
   text-transform: uppercase;
-  @media screen and (min-width: 768px) {
-  }
   @media screen and (min-width: 1280px) {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 1.19;
   }
 `;

@@ -21,7 +21,6 @@ export const Card = styled.li`
   background-color: var(--secondary-background-color);
   color: var(--main-font-color);
   height: 242px;
-
   a {
     background-color: var(--accent-color);
   }
@@ -49,7 +48,6 @@ export const LinkCard = styled.li`
     top: 0;
     right: 0;
   }
-
   a {
     display: flex;
     flex-direction: column;
@@ -57,7 +55,6 @@ export const LinkCard = styled.li`
     width: 100%;
     height: 100%;
   }
-
   svg {
     position: absolute;
     top: 12px;
@@ -67,12 +64,10 @@ export const LinkCard = styled.li`
     height: 48px;
     transition: all var(--transition-dur-and-func);
   }
-
   @media screen and (min-width: 768px) {
     padding: 24px;
     border-radius: 16px;
   }
-
   @media screen and (min-width: 1280px) {
     height: 480px;
     svg {
@@ -87,24 +82,19 @@ export const CardTitle = styled.h2`
   font-family: 'RightGrotesk-CompactBlack';
   font-size: 32px;
   font-weight: 900;
-  line-height: 32px;
-  letter-spacing: 0%;
+  line-height: 1;
   text-align: left;
   text-transform: uppercase;
-  @media screen and (min-width: 768px) {
-  }
   @media screen and (min-width: 1280px) {
     font-size: 64px;
-    line-height: 64px;
+    line-height: 1;
   }
 `;
 
 export const CardText = styled.p`
   font-family: 'MessinaSansMono-Regular';
   font-size: 12px;
-  font-weight: 400;
-  line-height: 14px;
-  letter-spacing: 0%;
+  line-height: 1.17;
   margin-left: auto;
   width: 192px;
   text-align: left;
@@ -115,6 +105,6 @@ export const CardText = styled.p`
   @media screen and (min-width: 1280px) {
     width: 228px;
     font-size: 24px;
-    line-height: 29px;
+    line-height: 1.2;
   }
 `;

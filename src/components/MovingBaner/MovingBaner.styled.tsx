@@ -15,7 +15,6 @@ export const BannerContainer = styled.div`
   width: 100%;
   background-color: var(--accent-color);
   overflow: hidden;
-
   display: flex;
   user-select: none;
   gap: 24px;
@@ -29,7 +28,6 @@ export const MovingLine = styled.ul`
   height: 52px;
   overflow: hidden;
   animation: ${moveLineAnimation} 15s linear infinite;
-
   li {
     display: flex;
     gap: 24px;
@@ -38,16 +36,13 @@ export const MovingLine = styled.ul`
     font-size: 18px;
     font-weight: bold;
     text-wrap: nowrap;
-
     color: var(--main-font-color);
     font-family: 'RightGrotesk-CompactBlack';
     font-size: 36px;
     font-weight: 900;
-    line-height: 36px;
-    letter-spacing: 0%;
+    line-height: 1;
     text-align: left;
     text-transform: uppercase;
-
     svg {
       width: 36px;
       height: 36px;

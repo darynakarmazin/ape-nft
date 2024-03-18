@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { faqData } from '../../data/faqData';
+import { ContentContainer } from '../../components/ContentContainer/ContentContainer.styles';
+import { Section } from '../../components/Section/Section.styled';
+import { Title } from '../../components/Title/Title.styled';
 import {
   FaqAnsver,
   FaqButton,
@@ -9,9 +12,6 @@ import {
   FaqQuestion,
   FaqQuestionWrapper,
 } from './FAQ.styled';
-import { Section } from '../../components/Section/Section.styled';
-import { Title } from '../../components/Title/Title.styled';
-import { ContentContainer } from '../../components/ContentContainer/ContentContainer.styles';
 
 function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -34,6 +34,7 @@ function FAQ() {
                 src={item.image}
                 alt="Monkey view"
                 $active={openIndex === index ? 'active' : 'not active'}
+                loading="lazy"
               />
               <FaqButton
                 type="button"

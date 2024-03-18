@@ -4,8 +4,9 @@ import TabMonkeyImg1x from '../../img/about/about-monkey-tab.png';
 import TabMonkeyImg2x from '../../img/about/about-monkey-tab@2.png';
 import DeskMonkeyImg1x from '../../img/about/about-monkey-deck.png';
 import DeskMonkeyImg2x from '../../img/about/about-monkey-deck@2.png';
-import { AddSharp } from '../../img/icons/Icons';
 import MovingBaner from '../../components/MovingBaner/MovingBaner';
+import { ContentContainer } from '../../components/ContentContainer/ContentContainer.styles';
+import { AddSharp } from '../../img/icons/Icons';
 import {
   AboutDescription,
   AboutImg,
@@ -15,7 +16,6 @@ import {
   SecondPartWrapper,
   TitleWrapper,
 } from './About.styled';
-import { ContentContainer } from '../../components/ContentContainer/ContentContainer.styles';
 
 function About() {
   return (
@@ -69,7 +69,11 @@ function About() {
           ${MobMonkeyImg2x} 2x
         `}
             />
-            <img src={DeskMonkeyImg1x} alt="monkey wearing glasses" />
+            <img
+              src={DeskMonkeyImg1x}
+              alt="monkey wearing glasses"
+              loading="lazy"
+            />
           </AboutImg>
         </SecondPartWrapper>
         <MovingBaner />

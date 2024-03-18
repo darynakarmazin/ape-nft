@@ -1,16 +1,15 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { useMediaQuery } from 'react-responsive';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import 'swiper/css/navigation';
-import { useMediaQuery } from 'react-responsive';
+import { galleryData } from '../../data/galleryData';
 import {
   ControllersWrapper,
   SwiperArea,
   SwiperBtn,
   SwiperImg,
 } from './CollectionSlider.styled';
-import { galleryData } from '../../data/galleryData';
 
 type GalleryItem = {
   image: string;
@@ -43,7 +42,7 @@ function CollectionSlider() {
       >
         {galleryData.map((item: GalleryItem, index: number) => (
           <SwiperSlide key={index}>
-            <SwiperImg src={item.image} alt="Monkey view" />
+            <SwiperImg src={item.image} alt="Monkey view" loading="lazy" />
           </SwiperSlide>
         ))}
       </Swiper>
