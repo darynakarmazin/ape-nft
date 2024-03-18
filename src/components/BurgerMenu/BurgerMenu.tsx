@@ -4,11 +4,11 @@ import {
   MenuBtn,
   MenuItem,
   MenuList,
-  MobileMenu,
   NavMenu,
   SocialItem,
   SocialList,
 } from './BurgerMenu.styled';
+import MobileMenu from '../MobileMenu/MobileMenu';
 
 interface Props {
   isScrolled: boolean;
@@ -60,7 +60,7 @@ function BurgerMenu({ isScrolled }: Props) {
             borderBottomLeftRadius: isMenuOpen ? '0' : '8px',
           }}
         >
-          <MobileMenu type="button">MENU</MobileMenu>
+          <MobileMenu />
           <MenuBtn type="button" onClick={handleMenuToggle}>
             {isMenuOpen ? 'CLOSE' : ' MENU'}
           </MenuBtn>
