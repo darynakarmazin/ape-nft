@@ -44,6 +44,10 @@ export const LabelDicrort = styled.label<{ $hasError: string }>`
       $hasError === 'error'
         ? '1px solid var(--accent-color)'
         : '1px solid rgb(30, 30, 30)'};
+
+    @media screen and (min-width: 1280px) {
+      width: 64px;
+    }
   }
   &:focus::before,
   &:active::before {
@@ -79,6 +83,9 @@ export const LabelWallet = styled.label<{ $hasError: string }>`
       $hasError === 'error'
         ? '1px solid var(--accent-color)'
         : '1px solid rgb(30, 30, 30)'};
+    @media screen and (min-width: 1280px) {
+      width: 64px;
+    }
   }
   &:focus::before,
   &:active::before {
@@ -113,6 +120,7 @@ export const Input = styled.input<{ $hasError: string }>`
     border: 1px solid var(--main-font-color);
   }
   @media screen and (min-width: 1280px) {
+    height: 64px;
     padding: 22.5px 24px 22.5px 88px;
   }
 `;
