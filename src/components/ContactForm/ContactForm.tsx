@@ -37,8 +37,7 @@ function ContactForm() {
 
     try {
       await schema.validate({ username, walletaddress }, { abortEarly: false });
-      toast.success('Thank you, form submitted successfully!');
-      console.log('User name:', username, 'Wallet address:', walletaddress);
+      toast.success(`Thank you, ${username} form submitted successfully!`);
       setUsername('');
       setWalletaddress('');
       setErrors({});
@@ -83,7 +82,7 @@ function ContactForm() {
           MINT
         </Button>
       </Form>
-      <ToastContainer />
+      <ToastContainer theme="dark" />
     </>
   );
 }
