@@ -1,14 +1,21 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
+  display: flex;
+  min-width: 216px;
+  width: 100%;
+  max-width: 248px;
+  flex-direction: column;
+  gap: 16px;
   @media screen and (min-width: 768px) {
+    width: 248px;
   }
-
   @media screen and (min-width: 1280px) {
+    gap: 24pxpx;
+    max-width: none;
+    width: 397px;
   }
 `;
-
-export const Label = styled.label``;
 
 export const Input = styled.input<{ $hasError: string }>`
   background-color: ${({ $hasError }) =>

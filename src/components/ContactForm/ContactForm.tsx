@@ -3,7 +3,7 @@ import { omit } from 'lodash';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useEffect, useState } from 'react';
-import { Button, ErrorSpan, Form, Input, Label } from './ContactForm.styled';
+import { Button, ErrorSpan, Form, Input } from './ContactForm.styled';
 
 const schema = Yup.object().shape({
   username: Yup.string().required('Please enter your User name'),
@@ -62,30 +62,24 @@ function ContactForm() {
   return (
     <>
       <Form onSubmit={handleSubmit}>
-        <Label>
-          <Input
-            type="text"
-            name="username"
-            placeholder="@USERNAME"
-            value={username}
-            onChange={handleChange}
-            $hasError={!!errors.username ? 'error' : ''}
-          />
-          {errors.username && <ErrorSpan>{errors.username}</ErrorSpan>}
-        </Label>
-        <Label>
-          <Input
-            type="text"
-            name="walletaddress"
-            placeholder="WALLET ADDRESS"
-            value={walletaddress}
-            onChange={handleChange}
-            $hasError={!!errors.walletaddress ? 'error' : ''}
-          />
-          {errors.walletaddress && (
-            <ErrorSpan>{errors.walletaddress}</ErrorSpan>
-          )}
-        </Label>
+        <Input
+          type="text"
+          name="username"
+          placeholder="@USERNAME"
+          value={username}
+          onChange={handleChange}
+          $hasError={!!errors.username ? 'error' : ''}
+        />
+        {errors.username && <ErrorSpan>{errors.username}</ErrorSpan>}
+        <Input
+          type="text"
+          name="walletaddress"
+          placeholder="WALLET ADDRESS"
+          value={walletaddress}
+          onChange={handleChange}
+          $hasError={!!errors.walletaddress ? 'error' : ''}
+        />
+        {errors.walletaddress && <ErrorSpan>{errors.walletaddress}</ErrorSpan>}
 
         <Button type="submit" aria-label="Send">
           MINT
