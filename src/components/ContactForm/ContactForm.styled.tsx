@@ -17,8 +17,13 @@ export const Form = styled.form`
   }
 `;
 
+export const Label = styled.label`
+  position: relative;
+  width: 100%;
+`;
+
 export const Input = styled.input<{ $hasError: string }>`
-  position: static;
+  width: 100%;
   background-color: ${({ $hasError }) =>
     $hasError === 'active'
       ? 'var(--secondary-background-color)'
@@ -54,9 +59,17 @@ export const Button = styled.button`
 `;
 
 export const ErrorSpan = styled.span`
-  color: #d28b8b;
+  position: absolute;
+  right: 0;
+  bottom: -12px;
+  color: var(--accent-color);
   text-align: end;
-  font-family: var(--main-font);
-  font-size: 12px;
-  letter-spacing: -0.48px;
+  font-family: 'MessinaSansMono-Regular';
+  text-transform: uppercase;
+  font-size: 10px;
+  line-heigh: 1.2;
+  @media screen and (min-width: 1280px) {
+    font-size: 12px;
+    line-heigh: 1.7;
+  }
 `;
