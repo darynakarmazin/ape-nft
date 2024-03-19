@@ -6,8 +6,6 @@ The layout is adaptive and cross-browser - mobile from 360px to 480px (responsiv
 
 Teclology stack [React, Typescript, Git, html5, styled-components, gh-pages, css3, react-icons, css-variables, react-responsive, react-hooks, usestate]
 
-![Main page](https://github.com/darynakarmazin/ape-nft/raw/main/src/img/og-image/og-image.png)
-
 #Header & Hero
 1. Used tag 'picture' for optimized image usage.
 2. The Burger menu and social network icons are fixed.
@@ -38,10 +36,7 @@ Teclology stack [React, Typescript, Git, html5, styled-components, gh-pages, css
 ![Footer](https://github.com/darynakarmazin/ape-nft/raw/main/src/img/og-image/footer.png)
 
 #Lighthouse report
-![Footer](https://github.com/darynakarmazin/ape-nft/raw/main/src/img/og-image/)
-
-#Validation report
-![Footer](https://github.com/darynakarmazin/ape-nft/raw/main/src/img/og-image/)
+![Lighthouse](https://github.com/darynakarmazin/ape-nft/raw/main/src/img/og-image/lighthouse.png)
 
 
 
