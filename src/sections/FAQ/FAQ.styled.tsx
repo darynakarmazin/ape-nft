@@ -27,6 +27,10 @@ export const FaqListItem = styled.li<{ $active: string }>`
   &:focus h3 {
     color: var(--accent-color);
   }
+  &:hover button,
+  &:focus button {
+    color: var(--main-font-color);
+  }
   h3 {
     color: ${({ $active }) =>
       $active === 'active' ? 'var(--accent-color)' : 'var(--main-font-color)'};
