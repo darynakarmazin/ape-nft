@@ -8,7 +8,7 @@ function MindMap() {
   return (
     <Section id="m-map">
       <ContentContainer>
-        <Title>MindMap</Title>
+        <Title>Mind Map</Title>
         <MindSlider />
         <GridGallery />
       </ContentContainer>
