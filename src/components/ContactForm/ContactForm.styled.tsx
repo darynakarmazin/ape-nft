@@ -13,7 +13,7 @@ export const Form = styled.form`
     width: 248px;
   }
   @media screen and (min-width: 1280px) {
-    gap: 24pxpx;
+    gap: 24px;
     max-width: none;
     width: 397px;
   }

@@ -95,7 +95,6 @@ function ContactForm() {
             <ErrorSpan>{errors.walletaddress}</ErrorSpan>
           )}
         </LabelWallet>
-
         <Button type="submit" aria-label="Send">
           {submitted
             ? 'MINTED'

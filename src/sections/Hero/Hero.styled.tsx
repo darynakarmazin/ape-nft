@@ -31,7 +31,6 @@ export const HeroTitle = styled.h1`
   font-size: 44px;
   font-weight: 900;
   line-height: 44px;
-  letter-spacing: 1%;
   margin-bottom: 8px;
   text-align: center;
   @media screen and (min-width: 768px) {
@@ -126,8 +125,7 @@ export const HeroDescription = styled.p`
   font-family: 'MessinaSansMono-Regular';
   font-size: 12px;
   font-weight: 400;
-  line-height: 14px;
-  letter-spacing: 0%;
+  line-height: 1.17;
   text-align: center;
   text-transform: uppercase;
   @media screen and (min-width: 768px) {

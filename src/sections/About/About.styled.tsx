@@ -101,7 +101,6 @@ export const IconWrapper = styled.div`
     font-size: 12px;
     font-weight: 400;
     line-height: 14px;
-    letter-spacing: 0%;
     text-align: center;
     text-transform: uppercase;
   }

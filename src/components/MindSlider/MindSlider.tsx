@@ -4,13 +4,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import cardsData from '../../data/cardsData.json';
 import { UpLeftArrow } from '../../img/icons/Icons';
+import { CardText, CardTitle } from '../GridGallery/GridGallery.module';
 import {
   Card,
-  CardText,
-  CardTitle,
+  ControllersWrapper,
   LinkCard,
-} from '../GridGallery/GridGallery.module';
-import { ControllersWrapper, SwiperArea, SwiperBtn } from './MindSlider.styled';
+  SwiperArea,
+  SwiperBtn,
+} from './MindSlider.styled';
 
 function MindSlider() {
   let slidesPerView = 1;
