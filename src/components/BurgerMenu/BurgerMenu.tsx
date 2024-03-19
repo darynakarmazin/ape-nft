@@ -27,27 +27,47 @@ function BurgerMenu({ isScrolled, handleModalOpen }: Props) {
       {isMenuOpen && (
         <SocialList>
           <SocialItem>
-            <a href="#about" aria-label="link scroll to the About section">
+            <a
+              href="#about"
+              aria-label="link scroll to the About section"
+              onClick={handleMenuToggle}
+            >
               ABOUT
             </a>
           </SocialItem>
           <SocialItem>
-            <a href="#m-map" aria-label="link scroll to the M-map section">
+            <a
+              href="#m-map"
+              aria-label="link scroll to the M-map section"
+              onClick={handleMenuToggle}
+            >
               M-MAP
             </a>
           </SocialItem>
           <SocialItem>
-            <a href="#faq" aria-label="link scroll to the FAQ section">
+            <a
+              href="#faq"
+              aria-label="link scroll to the FAQ section"
+              onClick={handleMenuToggle}
+            >
               FAQ
             </a>
           </SocialItem>
           <SocialItem>
-            <a href="#arts" aria-label="link scroll to the Arts section">
+            <a
+              href="#arts"
+              aria-label="link scroll to the Arts section"
+              onClick={handleMenuToggle}
+            >
               ARTS
             </a>
           </SocialItem>
           <SocialItem>
-            <a href="#mint" aria-label="link scroll to the Mint section">
+            <a
+              href="#mint"
+              aria-label="link scroll to the Mint section"
+              onClick={handleMenuToggle}
+            >
               MINT
             </a>
           </SocialItem>
