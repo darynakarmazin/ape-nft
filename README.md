@@ -4,7 +4,7 @@ MurkUp https://www.figma.com/file/NhwvCnRetLh4PsJY3rD2d6/Ape-NFT?type=design&nod
 
 The layout is adaptive and cross-browser - mobile from 360px to 480px (responsive layout), tablet - 768px, desktop - 1280px. Used the Mobile first approach. For formation, used Prettier. Used custom fonts. Deployed on gh-pages.
 
-![Main page](https://github.com/darynakarmazin/ape-nft/raw/main/src/img/og-image/og-image.png)
+Teclology stack [React, Typescript, Git, html5, styled-components, gh-pages, css3, react-icons, css-variables, react-responsive, react-hooks, usestate]
 
 #Header & Hero
 1. Used tag 'picture' for optimized image usage.
@@ -34,6 +34,12 @@ The layout is adaptive and cross-browser - mobile from 360px to 480px (responsiv
 
 #Footer
 ![Footer](https://github.com/darynakarmazin/ape-nft/raw/main/src/img/og-image/footer.png)
+
+#Lighthouse report
+![Lighthouse](https://github.com/darynakarmazin/ape-nft/raw/main/src/img/og-image/lighthouse.png)
+
+
+
 
 
 
