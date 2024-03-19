@@ -7,30 +7,28 @@ import {
 } from './MovingBaner.styled';
 
 function MovingBaner() {
-  return (
-    <BannerContainer>
-      <MovingLineContainer>
-        <MovingLine>
-          {banners.map((banner, index) => (
-            <li key={index}>
-              <p>{banner.text}</p>
-              <AddSharp />
-            </li>
-          ))}
-        </MovingLine>
-      </MovingLineContainer>
-      <MovingLineContainer>
-        <MovingLine aria-hidden="true">
-          {banners.map((banner, index) => (
-            <li key={index}>
-              <p>{banner.text}</p>
-              <AddSharp />
-            </li>
-          ))}
-        </MovingLine>
-      </MovingLineContainer>
-    </BannerContainer>
-  );
+  const renderBanners = () => {
+    return banners.map((banner, index) => (
+      <li key={index}>
+        <p>{banner.text}</p>
+        <AddSharp />
+      </li>
+    ));
+  };
+
+  const renderMovingLineContainers = (count: number) => {
+    const movingLineContainers = [];
+    for (let i = 0; i < count; i++) {
+      movingLineContainers.push(
+        <MovingLineContainer key={i}>
+          <MovingLine aria-hidden={i > 0}>{renderBanners()}</MovingLine>
+        </MovingLineContainer>
+      );
+    }
+    return movingLineContainers;
+  };
+
+  return <BannerContainer>{renderMovingLineContainers(3)}</BannerContainer>;
 }
 
 export default MovingBaner;
