@@ -1,4 +1,22 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+`;
 
 export const MobileMenuBtn = styled.button`
   display: none;
@@ -26,7 +44,7 @@ export const MobileMenuBtn = styled.button`
   }
 `;
 
-export const Backdrop = styled.div`
+export const Backdrop = styled.div<{ $isOpen: string }>`
   display: none;
   @media screen and (max-width: 767px) {
     display: block;
@@ -37,19 +55,23 @@ export const Backdrop = styled.div`
     width: 100%;
     height: 100%;
     background: var(--main-background-color);
-    opacity: 1;
     transition: all var(--transition-dur-and-func);
+    opacity: ${({ $isOpen }) => ($isOpen ? '1' : '0')};
+    animation: ${({ $isOpen }) => ($isOpen ? fadeIn : fadeOut)} 0.6s ease
+      forwards;
   }
 `;
 
-export const Modal = styled.div`
+export const Modal = styled.div<{ $isOpen: string }>`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: scale(1) translate(-50%, -50%);
+  transform: scale(${({ $isOpen }) => ($isOpen ? '1' : '0')})
+    translate(-50%, -50%);
   padding-top: 54px;
   height: 100vh;
   transition: all var(--transition-dur-and-func);
+  animation: ${({ $isOpen }) => ($isOpen ? fadeIn : fadeOut)} 0.6s ease forwards;
 `;
 
 export const ModalContent = styled.div`

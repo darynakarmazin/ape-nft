@@ -55,8 +55,11 @@ function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen }: Props) {
   return (
     <>
       {isMobileMenuOpen && (
-        <Backdrop>
-          <Modal className="container">
+        <Backdrop $isOpen={isMobileMenuOpen ? 'open' : 'close'}>
+          <Modal
+            $isOpen={isMobileMenuOpen ? 'open' : 'close'}
+            className="container"
+          >
             <ModalContent>
               <ModalHeader>
                 <LogoLink href="/" aria-label="Logo link to main page">
