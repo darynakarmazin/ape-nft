@@ -1,6 +1,6 @@
 Ape NFT Landing page in accordance with the technical task. Frontend test task.
 
-MurkUp https://www.figma.com/file/NhwvCnRetLh4PsJY3rD2d6/Ape-NFT?type=design&node-id=45-3033&mode=design&t=9TnC1NEkjPbGv2Xi-0.
+MarkUp https://www.figma.com/file/NhwvCnRetLh4PsJY3rD2d6/Ape-NFT?type=design&node-id=45-3033&mode=design&t=9TnC1NEkjPbGv2Xi-0.
 
 The layout is adaptive and cross-browser - mobile from 360px to 480px (responsive layout), tablet - 768px, desktop - 1280px. Used the Mobile first approach. For formation, used Prettier. Used custom fonts. Deployed on gh-pages.
 
