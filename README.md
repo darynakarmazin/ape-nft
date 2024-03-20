@@ -1,7 +1,31 @@
-Ape NFT Landing page in accordance with the technical task. Frontend test task.
+# Ape NFT Landing page in accordance with the technical task.
 
-MarkUp https://www.figma.com/file/NhwvCnRetLh4PsJY3rD2d6/Ape-NFT?type=design&node-id=45-3033&mode=design&t=9TnC1NEkjPbGv2Xi-0.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
+`npm install`
+Runs  for installing dependencies.
+
+`npm start`
+Runs the app in the development mode.
+
+`npm test`
+Launches the test runner in the interactive watch mode.
+
+`npm run build`
+Builds the app for production to the `build` folder.
+
+`npm run eject`
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+
+## Product Requirements Document
+https://docs.google.com/document/d/1U3BNnY61mQnyvSC_dphAVgYDP1omhO4g/edit#heading=h.75qiissueht4
+
+## Figma markup Document
+https://www.figma.com/file/NhwvCnRetLh4PsJY3rD2d6/Ape-NFT?type=design&node-id=45-3033&mode=design&t=9TnC1NEkjPbGv2Xi-0.
+
+## Learn More
 The layout is adaptive and cross-browser - mobile from 360px to 480px (responsive layout), tablet - 768px, desktop - 1280px. Used the Mobile first approach. For formation, used Prettier. Used custom fonts. Deployed on gh-pages.
 
 ![Og-image](https://github.com/darynakarmazin/ape-nft/raw/main/src/img/og-image/og.png)
