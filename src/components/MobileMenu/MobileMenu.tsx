@@ -62,7 +62,7 @@ function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen }: Props) {
           >
             <ModalContent>
               <ModalHeader>
-                <LogoLink href="/ape-nft" aria-label="Logo link to main page">
+                <LogoLink to="/" aria-label="Logo link to main page">
                   <Logo />
                 </LogoLink>
                 <MenuList>

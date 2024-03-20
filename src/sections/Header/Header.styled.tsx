@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderSection = styled.header`
@@ -29,7 +30,7 @@ export const HeaderContainer = styled.div`
   }
 `;
 
-export const LogoLink = styled.a`
+export const LogoLink = styled(NavLink)`
   pointer-events: auto;
   padding: 8px 0;
   svg {

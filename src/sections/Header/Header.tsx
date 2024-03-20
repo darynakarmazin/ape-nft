@@ -34,7 +34,7 @@ function Header() {
           style={{ display: 'flex', justifyContent: 'center' }}
         >
           <HeaderContainer>
-            <LogoLink href="/ape-nft" aria-label="Logo link to main page">
+            <LogoLink to="/" aria-label="Logo link to main page">
               {!isScrolled && <Logo />}
             </LogoLink>
             <BurgerMenu
