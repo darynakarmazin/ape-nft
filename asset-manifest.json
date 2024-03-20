@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ape-nft/static/css/main.df3820b9.css",
+    "main.css": "/ape-nft/static/css/main.bf0d0a84.css",
     "main.js": "/ape-nft/static/js/main.d9c93251.js",
     "static/media/about-monkey-deck@2.png": "/ape-nft/static/media/about-monkey-deck@2.14a8308e89c6fd613bf9.png",
     "static/media/hero-monkey-deck@2.png": "/ape-nft/static/media/hero-monkey-deck@2.8b66b82224cef936159c.png",
@@ -40,11 +40,11 @@
     "static/media/form-meta.svg": "/ape-nft/static/media/form-meta.1e1318ed1d79874e18f31e148cd282c9.svg",
     "static/media/form-discord.svg": "/ape-nft/static/media/form-discord.7d6b920863b971801cacad7bf38f60b7.svg",
     "index.html": "/ape-nft/index.html",
-    "main.df3820b9.css.map": "/ape-nft/static/css/main.df3820b9.css.map",
+    "main.bf0d0a84.css.map": "/ape-nft/static/css/main.bf0d0a84.css.map",
     "main.d9c93251.js.map": "/ape-nft/static/js/main.d9c93251.js.map"
   },
   "entrypoints": [
-    "static/css/main.df3820b9.css",
+    "static/css/main.bf0d0a84.css",
     "static/js/main.d9c93251.js"
   ]
 }
