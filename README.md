@@ -1,4 +1,4 @@
-# Ape NFT Landing page in accordance with the technical task.
+# Ape NFT Landing page.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
