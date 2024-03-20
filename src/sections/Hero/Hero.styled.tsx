@@ -33,6 +33,8 @@ export const HeroTitle = styled.h1`
   line-height: 44px;
   margin-bottom: 8px;
   text-align: center;
+  text-wrap: nowrap;
+  white-space: nowrap;
   @media screen and (min-width: 768px) {
     font-size: 92px;
     line-height: 92px;
@@ -92,6 +94,8 @@ export const HeroBtn = styled.a`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  text-wrap: nowrap;
+  white-space: nowrap;
   padding: 10px 70px 12px;
   border-radius: 8px;
   backdrop-filter: blur(12px);

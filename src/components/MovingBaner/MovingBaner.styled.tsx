@@ -36,6 +36,7 @@ export const MovingLine = styled.ul`
     font-size: 18px;
     font-weight: bold;
     text-wrap: nowrap;
+    white-space: nowrap;
     color: var(--main-font-color);
     font-family: 'RightGrotesk-CompactBlack';
     font-size: 36px;

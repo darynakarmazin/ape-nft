@@ -72,6 +72,7 @@ export const FaqButton = styled.button<{ $active: string }>`
   font-weight: 400;
   line-height: 20px;
   text-wrap: nowrap;
+  white-space: nowrap;
   width: 23px;
   height: 20px;
   @media screen and (min-width: 768px) {
