@@ -132,6 +132,11 @@ export const MenuItem = styled.li`
   background: rgba(255, 255, 255, 0.1);
   cursor: pointer;
   a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
     svg {
       width: 16px;
       height: 16px;
