@@ -18,12 +18,24 @@ const fadeOut = keyframes`
   }
 `;
 
-export const MenuList = styled.ul`
+export const MenuList = styled.ul<{ $isOpen: string }>`
   display: flex;
   flex-direction: column;
   gap: 8px;
+  > li:first-child {
+    border-top-left-radius: ${({ $isOpen }) =>
+      $isOpen === 'open' ? '0' : '8px'};
+    border-bottom-left-radius: ${({ $isOpen }) =>
+      $isOpen === 'open' ? '0' : '8px'};
+  }
   @media screen and (min-width: 1280px) {
     gap: 16px;
+    > li:first-child {
+      border-top-left-radius: ${({ $isOpen }) =>
+        $isOpen === 'open' ? '0' : '12px'};
+      border-bottom-left-radius: ${({ $isOpen }) =>
+        $isOpen === 'open' ? '0' : '12px'};
+    }
   }
 `;
 
@@ -102,7 +114,7 @@ export const BurgerList = styled.ul<{ $isOpen: string }>`
       border-top-left-radius: 8px;
       border-bottom-left-radius: 8px;
     }
-    opacity: ${({ $isOpen }) => ($isOpen ? '1' : '0')};
+    opacity: ${({ $isOpen }) => ($isOpen === 'open' ? '1' : '0')};
     animation: ${({ $isOpen }) => ($isOpen === 'open' ? fadeIn : fadeOut)} 0.8s
       ease forwards;
     visibility: ${({ $isOpen }) => ($isOpen === 'open' ? 'visible' : 'hidden')};

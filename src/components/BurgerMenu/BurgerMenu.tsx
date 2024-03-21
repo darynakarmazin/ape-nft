@@ -71,13 +71,8 @@ function BurgerMenu({ isScrolled, handleModalOpen }: Props) {
           </a>
         </BurgerItem>
       </BurgerList>
-      <MenuList>
-        <MenuItem
-          style={{
-            borderTopLeftRadius: isMenuOpen ? '0' : '8px',
-            borderBottomLeftRadius: isMenuOpen ? '0' : '8px',
-          }}
-        >
+      <MenuList $isOpen={isMenuOpen ? 'open' : 'close'}>
+        <MenuItem>
           <MobileMenuBtn
             type="button"
             aria-label="button for opening menu"
