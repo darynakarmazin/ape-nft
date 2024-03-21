@@ -1,4 +1,22 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+`;
 
 export const MenuList = styled.ul`
   display: flex;
@@ -75,7 +93,7 @@ export const MenuBtn = styled.button`
   }
 `;
 
-export const SocialList = styled.ul`
+export const BurgerList = styled.ul<{ $isOpen: string }>`
   display: none;
   transition: all var(--transition-dur-and-func);
   li:first-child {
@@ -84,10 +102,13 @@ export const SocialList = styled.ul`
   }
   @media screen and (min-width: 768px) {
     display: flex;
+    opacity: ${({ $isOpen }) => ($isOpen ? '1' : '0')};
+    animation: ${({ $isOpen }) => ($isOpen ? fadeIn : fadeOut)} 0.8s ease
+      forwards;
   }
 `;
 
-export const SocialItem = styled.li`
+export const BurgerItem = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;

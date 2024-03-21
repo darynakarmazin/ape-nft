@@ -5,8 +5,8 @@ import {
   MenuItem,
   MenuList,
   NavMenu,
-  SocialItem,
-  SocialList,
+  BurgerItem,
+  BurgerList,
 } from './BurgerMenu.styled';
 import { MobileMenuBtn } from '../MobileMenu/MobileMenu.styled';
 
@@ -25,8 +25,8 @@ function BurgerMenu({ isScrolled, handleModalOpen }: Props) {
   return (
     <NavMenu $scroll={isScrolled ? 'true' : 'false'}>
       {isMenuOpen && (
-        <SocialList>
-          <SocialItem>
+        <BurgerList $isOpen={isMenuOpen ? 'open' : 'close'}>
+          <BurgerItem>
             <a
               href="#about"
               aria-label="link scroll to the About section"
@@ -34,8 +34,8 @@ function BurgerMenu({ isScrolled, handleModalOpen }: Props) {
             >
               ABOUT
             </a>
-          </SocialItem>
-          <SocialItem>
+          </BurgerItem>
+          <BurgerItem>
             <a
               href="#m-map"
               aria-label="link scroll to the M-map section"
@@ -43,8 +43,8 @@ function BurgerMenu({ isScrolled, handleModalOpen }: Props) {
             >
               M-MAP
             </a>
-          </SocialItem>
-          <SocialItem>
+          </BurgerItem>
+          <BurgerItem>
             <a
               href="#faq"
               aria-label="link scroll to the FAQ section"
@@ -52,8 +52,8 @@ function BurgerMenu({ isScrolled, handleModalOpen }: Props) {
             >
               FAQ
             </a>
-          </SocialItem>
-          <SocialItem>
+          </BurgerItem>
+          <BurgerItem>
             <a
               href="#arts"
               aria-label="link scroll to the Arts section"
@@ -61,8 +61,8 @@ function BurgerMenu({ isScrolled, handleModalOpen }: Props) {
             >
               ARTS
             </a>
-          </SocialItem>
-          <SocialItem>
+          </BurgerItem>
+          <BurgerItem>
             <a
               href="#mint"
               aria-label="link scroll to the Mint section"
@@ -70,8 +70,8 @@ function BurgerMenu({ isScrolled, handleModalOpen }: Props) {
             >
               MINT
             </a>
-          </SocialItem>
-        </SocialList>
+          </BurgerItem>
+        </BurgerList>
       )}
       <MenuList>
         <MenuItem
