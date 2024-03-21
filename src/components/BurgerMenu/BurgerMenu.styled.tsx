@@ -19,6 +19,7 @@ const fadeOut = keyframes`
 `;
 
 export const MenuList = styled.ul<{ $isOpen: string }>`
+  pointer-events: auto;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -108,7 +109,7 @@ export const MenuBtn = styled.button`
 export const BurgerList = styled.ul<{ $isOpen: string }>`
   display: none;
   @media screen and (min-width: 768px) {
-    display: flex;
+    display: ${({ $isOpen }) => ($isOpen === 'open' ? 'flex' : 'none')};
     transition: all var(--transition-dur-and-func);
     li:first-child {
       border-top-left-radius: 8px;
@@ -122,6 +123,7 @@ export const BurgerList = styled.ul<{ $isOpen: string }>`
 `;
 
 export const BurgerItem = styled.li`
+  pointer-events: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,7 +167,6 @@ export const BurgerItem = styled.li`
 `;
 
 export const NavMenu = styled.nav<{ $scroll: string }>`
-  pointer-events: auto; 
   display: flex;
   color: ${({ $scroll }) =>
     $scroll === 'true'
