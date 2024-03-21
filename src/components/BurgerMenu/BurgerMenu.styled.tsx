@@ -109,7 +109,7 @@ export const MenuBtn = styled.button`
 export const BurgerList = styled.ul<{ $isOpen: string }>`
   display: none;
   @media screen and (min-width: 768px) {
-    display: ${({ $isOpen }) => ($isOpen === 'open' ? 'flex' : 'none')};
+    display: flex;
     transition: all var(--transition-dur-and-func);
     li:first-child {
       border-top-left-radius: 8px;
