@@ -56,9 +56,10 @@ export const Backdrop = styled.div<{ $isOpen: string }>`
     height: 100%;
     background: var(--main-background-color);
     transition: all var(--transition-dur-and-func);
-    opacity: ${({ $isOpen }) => ($isOpen ? '1' : '0')};
-    animation: ${({ $isOpen }) => ($isOpen ? fadeIn : fadeOut)} 0.8s ease
-      forwards;
+    opacity: ${({ $isOpen }) => ($isOpen === 'open' ? '1' : '0')};
+    animation: ${({ $isOpen }) => ($isOpen === 'open' ? fadeIn : fadeOut)} 0.8s
+      ease forwards;
+    visibility: ${({ $isOpen }) => ($isOpen === 'open' ? 'visible' : 'hidden')};
   }
 `;
 
@@ -66,12 +67,14 @@ export const Modal = styled.div<{ $isOpen: string }>`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: scale(${({ $isOpen }) => ($isOpen ? '1' : '0')})
+  transform: scale(${({ $isOpen }) => ($isOpen === 'open' ? '1' : '0')})
     translate(-50%, -50%);
   padding-top: 54px;
   height: 100vh;
   transition: all var(--transition-dur-and-func);
-  animation: ${({ $isOpen }) => ($isOpen ? fadeIn : fadeOut)} 0.8s ease forwards;
+  animation: ${({ $isOpen }) => ($isOpen === 'open' ? fadeIn : fadeOut)} 0.8s
+    ease forwards;
+  visibility: ${({ $isOpen }) => ($isOpen === 'open' ? 'visible' : 'hidden')};
 `;
 
 export const ModalContent = styled.div`

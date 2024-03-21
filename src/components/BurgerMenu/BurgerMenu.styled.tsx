@@ -95,16 +95,17 @@ export const MenuBtn = styled.button`
 
 export const BurgerList = styled.ul<{ $isOpen: string }>`
   display: none;
-  transition: all var(--transition-dur-and-func);
-  li:first-child {
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-  }
   @media screen and (min-width: 768px) {
     display: flex;
+    transition: all var(--transition-dur-and-func);
+    li:first-child {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
     opacity: ${({ $isOpen }) => ($isOpen ? '1' : '0')};
-    animation: ${({ $isOpen }) => ($isOpen ? fadeIn : fadeOut)} 0.8s ease
-      forwards;
+    animation: ${({ $isOpen }) => ($isOpen === 'open' ? fadeIn : fadeOut)} 0.8s
+      ease forwards;
+    visibility: ${({ $isOpen }) => ($isOpen === 'open' ? 'visible' : 'hidden')};
   }
 `;
 

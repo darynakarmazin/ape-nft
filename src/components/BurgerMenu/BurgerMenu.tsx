@@ -24,55 +24,53 @@ function BurgerMenu({ isScrolled, handleModalOpen }: Props) {
 
   return (
     <NavMenu $scroll={isScrolled ? 'true' : 'false'}>
-      {isMenuOpen && (
-        <BurgerList $isOpen={isMenuOpen ? 'open' : 'close'}>
-          <BurgerItem>
-            <a
-              href="#about"
-              aria-label="link scroll to the About section"
-              onClick={handleMenuToggle}
-            >
-              ABOUT
-            </a>
-          </BurgerItem>
-          <BurgerItem>
-            <a
-              href="#m-map"
-              aria-label="link scroll to the M-map section"
-              onClick={handleMenuToggle}
-            >
-              M-MAP
-            </a>
-          </BurgerItem>
-          <BurgerItem>
-            <a
-              href="#faq"
-              aria-label="link scroll to the FAQ section"
-              onClick={handleMenuToggle}
-            >
-              FAQ
-            </a>
-          </BurgerItem>
-          <BurgerItem>
-            <a
-              href="#arts"
-              aria-label="link scroll to the Arts section"
-              onClick={handleMenuToggle}
-            >
-              ARTS
-            </a>
-          </BurgerItem>
-          <BurgerItem>
-            <a
-              href="#mint"
-              aria-label="link scroll to the Mint section"
-              onClick={handleMenuToggle}
-            >
-              MINT
-            </a>
-          </BurgerItem>
-        </BurgerList>
-      )}
+      <BurgerList $isOpen={isMenuOpen ? 'open' : 'close'}>
+        <BurgerItem>
+          <a
+            href="#about"
+            aria-label="link scroll to the About section"
+            onClick={handleMenuToggle}
+          >
+            ABOUT
+          </a>
+        </BurgerItem>
+        <BurgerItem>
+          <a
+            href="#m-map"
+            aria-label="link scroll to the M-map section"
+            onClick={handleMenuToggle}
+          >
+            M-MAP
+          </a>
+        </BurgerItem>
+        <BurgerItem>
+          <a
+            href="#faq"
+            aria-label="link scroll to the FAQ section"
+            onClick={handleMenuToggle}
+          >
+            FAQ
+          </a>
+        </BurgerItem>
+        <BurgerItem>
+          <a
+            href="#arts"
+            aria-label="link scroll to the Arts section"
+            onClick={handleMenuToggle}
+          >
+            ARTS
+          </a>
+        </BurgerItem>
+        <BurgerItem>
+          <a
+            href="#mint"
+            aria-label="link scroll to the Mint section"
+            onClick={handleMenuToggle}
+          >
+            MINT
+          </a>
+        </BurgerItem>
+      </BurgerList>
       <MenuList>
         <MenuItem
           style={{

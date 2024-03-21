@@ -20,6 +20,7 @@ export const HeaderContainer = styled.div`
   padding: 8px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
   @media screen and (min-width: 768px) {
     padding: 12px;
