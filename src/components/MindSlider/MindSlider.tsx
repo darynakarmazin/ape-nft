@@ -24,8 +24,8 @@ function MindSlider() {
         slidesPerView={slidesPerView}
         loop={false}
         navigation={{
-          nextEl: '.custom_next',
-          prevEl: '.custom_prev',
+          nextEl: '.mind_custom_next',
+          prevEl: '.mind_custom_prev',
         }}
         modules={[Navigation]}
       >
@@ -57,14 +57,14 @@ function MindSlider() {
       <ControllersWrapper>
         <SwiperBtn
           type="button"
-          className="custom_prev"
+          className="mind_custom_prev"
           aria-label="Previous slide"
         >
           Prev
         </SwiperBtn>
         <SwiperBtn
           type="button"
-          className="custom_next"
+          className="mind_custom_next"
           aria-label="Next slide"
         >
           Next
