@@ -24,6 +24,12 @@ export const SwiperBtn = styled.button`
   font-family: 'BiroScript-PlusBold';
   font-size: 24px;
   line-height: 1;
+  transition: all var(--transition-dur-and-func);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 `;
 
 export const Card = styled.div`
