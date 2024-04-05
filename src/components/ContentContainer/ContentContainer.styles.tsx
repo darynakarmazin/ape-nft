@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContentContainer = styled.section`
+export const ContentContainer = styled.div`
   width: 100%;
   min-width: 216px;
   @media screen and (min-width: 480px) {
