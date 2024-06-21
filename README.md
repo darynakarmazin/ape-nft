@@ -32,7 +32,7 @@ approach. For formation, used Prettier. Used custom fonts. Deployed on gh-pages.
 
 ![Og-image](https://github.com/darynakarmazin/ape-nft/raw/main/src/img/og-image/og.png)
 
-Teclology stack [React, Typescript, Git, html5, styled-components, gh-pages,
+Technology stack [React, Typescript, Git, html5, styled-components, gh-pages,
 css3, react-icons, css-variables, react-responsive, react-hooks, usestate]
 
 #Header & Hero
